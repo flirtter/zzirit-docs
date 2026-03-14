@@ -23,6 +23,7 @@ ZZIRIT 작업의 장기 기억 저장소다.
 - `scripts/sync_context_assets.py`: `zzirit-v2` spec과 로컬 디자인 자산을 허브 안으로 복제
 - `scripts/export_project_seed.py`: 현재 이슈를 GitHub Projects seed CSV/JSON으로 변환
 - `scripts/bootstrap_github_project.py`: GitHub Project scope 확인과 부트스트랩 안내
+- `scripts/sync_github_project.py`: 현재 issue/seed 상태를 GitHub Project field 값으로 동기화
 - `playbooks/github-projects.md`: GitHub Projects 운영 규칙과 필드/뷰 설계
 - `PUBLISHING.md`: GitHub 원격 레포 생성/푸시 절차
 
@@ -72,8 +73,12 @@ GitHub Projects 운영:
 - Projects는 현재 상태판
 - 권장 프로젝트 이름은 `ZZIRIT Delivery`
 - 필드/뷰 설계는 `playbooks/github-projects.md` 참고
-- 현재 토큰 scope 부족으로 Project API 생성은 아직 미반영
+- 현재 프로젝트 생성 완료:
+  - `https://github.com/users/ahg0223/projects/1`
+- `scripts/sync_github_project.py`로 실제 GitHub Project field까지 동기화
 - 대신 `scripts/export_project_seed.py` 가 현재 이슈를 project seed 파일로 생성한다.
+- 현재 상태 스냅샷:
+  - `snapshots/project-state.md`
 
 갱신:
 ```bash
@@ -81,4 +86,5 @@ cd /Users/user/zzirit-memory-hub
 python3 scripts/sync_context_assets.py
 python3 scripts/refresh_snapshot.py
 python3 scripts/export_project_seed.py
+python3 scripts/sync_github_project.py
 ```

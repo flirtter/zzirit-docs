@@ -14,6 +14,8 @@
 - 이름: `ZZIRIT Delivery`
 - 소스: `zzirit-memory-hub` 이슈
 - owner: `ahg0223`
+- 현재 생성된 프로젝트:
+  - `https://github.com/users/ahg0223/projects/1`
 
 ## 권장 필드
 
@@ -107,19 +109,19 @@
 - 완료 시 issue close + project status `Done`
 - blocked 반복 시 project status `Blocked`
 
-## 현재 제약
+## 현재 상태
 
-GitHub Project API를 쓰려면 `gh` 토큰에 다음 scope가 더 필요하다.
-
-- `read:project`
-- `project`
-- `read:org`
-
-지금은 repo/issue 수준 자동화는 가능하지만 Project 생성/필드 조작은 이 scope가 없어서 막혀 있다.
+- 로컬 `gh` 인증에는 현재 다음 scope가 반영되어 있다.
+  - `project`
+  - `read:org`
+  - `read:discussion`
+- 프로젝트 `ZZIRIT Delivery` 생성 완료
+- 현재 open issue 14개가 프로젝트에 반영됨
+- field 20개 구성 완료
 
 ## 실행 순서
 
 1. `scripts/export_project_seed.py` 로 현재 이슈를 seed 파일로 생성
-2. 토큰 scope 확보 후 `scripts/bootstrap_github_project.py` 실행
-3. 생성된 project에 seed CSV/JSON 기반으로 item 반영
-4. 이후 automation이 project field를 계속 갱신
+2. `scripts/sync_github_project.py` 로 project item/field 동기화
+3. 필요 시 `scripts/bootstrap_github_project.py` 로 scope/부트스트랩 상태 확인
+4. 이후 automation 결과를 이슈와 프로젝트에 계속 반영
