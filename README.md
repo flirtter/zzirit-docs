@@ -12,8 +12,10 @@ ZZIRIT 작업의 장기 기억 저장소다.
 
 구성:
 - `snapshots/`: 현재 로컬/원격 상태에서 생성한 스냅샷
+- `references/`: surface spec 사본과 로컬 디자인 PNG 사본
 - `.github/ISSUE_TEMPLATE/`: QA, 디자인 갭, 자동화 플래키, 리팩토링 추적용 이슈 템플릿
 - `scripts/refresh_snapshot.py`: 현재 작업 트리와 Mac Studio 원격 상태를 다시 수집해 스냅샷을 갱신
+- `scripts/sync_context_assets.py`: `zzirit-v2` spec과 로컬 디자인 자산을 허브 안으로 복제
 - `PUBLISHING.md`: GitHub 원격 레포 생성/푸시 절차
 
 기본 운영 원칙:
@@ -49,5 +51,6 @@ ZZIRIT 작업의 장기 기억 저장소다.
 갱신:
 ```bash
 cd /Users/user/zzirit-memory-hub
+python3 scripts/sync_context_assets.py
 python3 scripts/refresh_snapshot.py
 ```

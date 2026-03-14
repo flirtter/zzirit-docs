@@ -11,6 +11,7 @@
 1. 로컬 스냅샷 갱신
 ```bash
 cd /Users/user/zzirit-memory-hub
+python3 scripts/sync_context_assets.py
 python3 scripts/refresh_snapshot.py
 ```
 
