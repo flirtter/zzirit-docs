@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-14 13:52:01 KST",
+  "generated_at": "2026-03-14 14:11:55 KST",
   "memory_repo": "/Users/user/zzirit-memory-hub",
   "repositories": {
     "zzirit_v2": {
@@ -192,6 +192,7 @@
         "?? scripts/automation/select-parallel-focus.py",
         "?? scripts/automation/update-agent-state.py",
         "?? scripts/automation/write-design-result.py",
+        "?? scripts/automation/write-memory-hub-note.py",
         "?? scripts/review/capture-figma-screen-by-key.sh",
         "?? scripts/review/capture-ios-chat-review.sh",
         "?? scripts/review/capture-ios-likes-review.sh",
@@ -497,8 +498,8 @@
             "success_streak": 0,
             "blocked_streak": 0,
             "last_status": "partial",
-            "last_run_id": "20260314-133733",
-            "last_updated_at": "2026-03-14 13:49:33"
+            "last_run_id": "20260314-135003",
+            "last_updated_at": "2026-03-14 14:10:31"
           },
           "onboarding-followup": {
             "success_streak": 0,
@@ -623,16 +624,25 @@
             "host_qa_status": "pass",
             "design_result_status": "partial",
             "recorded_at": "2026-03-14 13:49:33"
+          },
+          {
+            "run_id": "20260314-135003",
+            "task_id": "my-followup",
+            "derived_status": "partial",
+            "state": "success",
+            "host_qa_status": "pass",
+            "design_result_status": "partial",
+            "recorded_at": "2026-03-14 14:10:31"
           }
         ],
         "current_task_id": "my-followup",
-        "updated_at": "2026-03-14 13:49:33",
-        "last_run_id": "20260314-133733",
-        "last_result_path": "/Users/user/zzirit-v2/artifacts/automation/runs/20260314-133733/result.json"
+        "updated_at": "2026-03-14 14:10:31",
+        "last_run_id": "20260314-135003",
+        "last_result_path": "/Users/user/zzirit-v2/artifacts/automation/runs/20260314-135003/result.json"
       },
       "next_action_md": "# Next Action\n\n- active_task_id: my-followup\n- title: My follow-up\n- section: my\n- queue_status: in_progress\n- success_streak: 0 / 1\n- blocked_streak: 0 / 3\n\n## Queue\n- likes: done (likes)\n- meeting: done (meeting)\n- qa-automation: done (automation)\n- chat: done (chat)\n- automation-followup: done (automation)\n- chat-followup: done (chat)\n- my-followup: in_progress (my)\n- onboarding-followup: pending (onboarding)\n- login-followup: pending (login)\n- meeting-followup: pending (meeting)\n- likes-followup: pending (likes)\n\n- next_pending_task: onboarding-followup\n",
-      "status_md": "# Automation Status\n\n- state: running\n- run_id: 20260314-135003\n- started_at: 2026-03-14 13:50:04\n- run_dir: /Users/user/zzirit-v2/artifacts/automation/runs/20260314-135003\n- focus_session_file: /Users/user/zzirit-v2/artifacts/automation/focus-session.json\n- focus_section: my\n- focus_label: MY/likes\n- task_id: my-followup\n- task_title: My follow-up\n- focus_target: 85%\n- focus_goal: MY 홈과 like 목록을 85% 수준까지 구현하고 프로필/설정 흐름과 연결한다.\n- focus_started_at: 2026-03-14 13:24:39\n- focus_expires_at: 2026-03-14 15:05:03\n- surface_spec_path: /Users/user/zzirit-v2/docs/spec/surfaces/my.md\n- surface_spec_status: draft\n- surface_qa_level: host_qa\n- surface_automation_status: high\n",
-      "health_md": "# Automation Health\n\n- checked_at: 2026-03-14 13:51:00\n- state: running\n- run_id: 20260314-135003\n- issue: none\n- message: healthy\n"
+      "status_md": "# Automation Status\n\n- state: running\n- run_id: 20260314-141101\n- started_at: 2026-03-14 14:11:02\n- run_dir: /Users/user/zzirit-v2/artifacts/automation/runs/20260314-141101\n- focus_session_file: /Users/user/zzirit-v2/artifacts/automation/focus-session.json\n- focus_section: my\n- focus_label: MY/likes\n- task_id: my-followup\n- task_title: My follow-up\n- focus_target: 85%\n- focus_goal: MY 홈과 like 목록을 85% 수준까지 구현하고 프로필/설정 흐름과 연결한다.\n- focus_started_at: 2026-03-14 13:24:39\n- focus_expires_at: 2026-03-14 15:26:01\n- surface_spec_path: /Users/user/zzirit-v2/docs/spec/surfaces/my.md\n- surface_spec_status: draft\n- surface_qa_level: host_qa\n- surface_automation_status: high\n",
+      "health_md": "# Automation Health\n\n- checked_at: 2026-03-14 14:11:00\n- state: success\n- run_id: 20260314-135003\n- issue: none\n- message: healthy\n"
     },
     "latest_manual_review_dirs": {
       "chat_host_qa": "/Users/user/zzirit-v2/artifacts/manual-review/chat-host-qa-20260314-124131-r4",
@@ -644,18 +654,18 @@
     },
     "latest_appium_dirs": {
       "appium_onboarding": [
-        "/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-103327",
         "/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-104826",
         "/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-123321",
         "/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-133355",
-        "/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-134629"
+        "/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-134629",
+        "/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-140727"
       ],
       "appium_likes": [
-        "/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040014",
         "/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040022",
         "/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040404",
         "/Users/user/zzirit-v2/artifacts/appium-likes/20260314-043635",
-        "/Users/user/zzirit-v2/artifacts/appium-likes/20260314-044905"
+        "/Users/user/zzirit-v2/artifacts/appium-likes/20260314-044905",
+        "/Users/user/zzirit-v2/artifacts/appium-likes/20260314-051003"
       ],
       "appium_meeting": [
         "/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100119",
@@ -671,7 +681,10 @@
         "/Users/user/zzirit-v2/artifacts/appium-chat/20260314-034139",
         "/Users/user/zzirit-v2/artifacts/appium-chat/20260314-042040"
       ]
-    }
+    },
+    "latest_automation_notes": [
+      "/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260314-141101.md"
+    ]
   },
   "surfaces": {
     "version": 1,

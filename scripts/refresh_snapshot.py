@@ -10,6 +10,7 @@ from typing import Any
 
 MEMORY_ROOT = Path("/Users/user/zzirit-memory-hub")
 SNAPSHOT_ROOT = MEMORY_ROOT / "snapshots"
+AUTOMATION_NOTE_ROOT = SNAPSHOT_ROOT / "automation-run-notes"
 ZZIRIT_V2_ROOT = Path("/Users/user/zzirit-v2")
 ZZIRIT_PROXY_ROOT = Path("/Users/user/zzirit-proxy")
 REMOTE_ROOT = "/Users/user/zzirit-v2"
@@ -67,6 +68,7 @@ def ensure_dirs() -> None:
         SNAPSHOT_ROOT / "git",
         SNAPSHOT_ROOT / "state",
         SNAPSHOT_ROOT / "surfaces",
+        AUTOMATION_NOTE_ROOT,
     ]:
         path.mkdir(parents=True, exist_ok=True)
 
@@ -141,6 +143,41 @@ def latest_remote_subdirs(rel_path: str, limit: int = 5) -> list[str]:
     return [line for line in result.stdout.splitlines() if line.strip()]
 
 
+def latest_remote_automation_note_paths(limit: int = 5) -> list[str]:
+    code = (
+        "from pathlib import Path; "
+        "root=Path('/Users/user/zzirit-v2/artifacts/automation/runs'); "
+        "notes=sorted([p/'memory-hub-note.md' for p in root.iterdir() if p.is_dir() and (p/'memory-hub-note.md').exists()]); "
+        f"print('\\n'.join(str(p) for p in notes[-{limit}:]))"
+    )
+    result = run_remote_python(code, timeout=20)
+    if result.returncode != 0:
+        return []
+    return [line for line in result.stdout.splitlines() if line.strip()]
+
+
+def copy_remote_file(remote_abs_path: str, local_path: Path) -> None:
+    result = run_remote(f"cat {shlex.quote(remote_abs_path)}", timeout=30)
+    if result.returncode != 0:
+        return
+    local_path.parent.mkdir(parents=True, exist_ok=True)
+    local_path.write_text(result.stdout, encoding="utf-8")
+
+
+def sync_remote_automation_notes() -> list[str]:
+    note_paths = latest_remote_automation_note_paths()
+    copied: list[str] = []
+    for remote_note in note_paths:
+        run_id = Path(remote_note).parent.name
+        local_md = AUTOMATION_NOTE_ROOT / f"{run_id}.md"
+        local_json = AUTOMATION_NOTE_ROOT / f"{run_id}.json"
+        copy_remote_file(remote_note, local_md)
+        copy_remote_file(str(Path(remote_note).with_suffix(".json")), local_json)
+        if local_md.exists():
+            copied.append(str(local_md))
+    return copied
+
+
 def collect_remote_identity() -> dict[str, str]:
     result = run_remote("hostname; whoami; sw_vers -productName; sw_vers -productVersion", timeout=20)
     if result.returncode != 0:
@@ -172,12 +209,14 @@ def collect_remote_state() -> dict[str, Any]:
     }
     latest_manual = {name: latest_remote_dir(prefix) for name, prefix in REMOTE_LATEST_PREFIXES.items()}
     latest_appium = {name: latest_remote_subdirs(path) for name, path in REMOTE_ARTIFACT_DIRS.items()}
+    latest_notes = sync_remote_automation_notes()
     return {
         **identity,
         "repo_root": REMOTE_ROOT,
         "automation": repo_state,
         "latest_manual_review_dirs": latest_manual,
         "latest_appium_dirs": latest_appium,
+        "latest_automation_notes": latest_notes,
     }
 
 
@@ -296,6 +335,10 @@ def render_automation_state_md(remote: dict[str, Any]) -> str:
         preview = ", ".join(f"`{v}`" for v in values) if values else "`missing`"
         lines.append(f"- {key}: {preview}")
     lines.append("")
+    lines.append("## Latest automation run notes")
+    for value in remote.get("latest_automation_notes", []):
+        lines.append(f"- `{value}`")
+    lines.append("")
     return "\n".join(lines)
 
 
@@ -315,6 +358,10 @@ def render_qa_status_md(remote: dict[str, Any]) -> str:
             lines.extend([f"  - `{item}`" for item in values])
         else:
             lines.append("  - `missing`")
+    lines.append("")
+    lines.append("## Latest automation run notes")
+    for value in remote.get("latest_automation_notes", []):
+        lines.append(f"- `{value}`")
     lines.append("")
     return "\n".join(lines)
 
@@ -345,6 +392,10 @@ def render_current_state_md(current: dict[str, Any]) -> str:
     for key, values in remote.get("latest_appium_dirs", {}).items():
         preview = ", ".join(f"`{value}`" for value in values[:2]) if values else "`missing`"
         lines.append(f"- {key}: {preview}")
+    lines.append("")
+    lines.append("## Latest automation run notes")
+    for value in remote.get("latest_automation_notes", []):
+        lines.append(f"- `{value}`")
     lines.extend(
         [
             "",

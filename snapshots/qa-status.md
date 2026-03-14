@@ -10,17 +10,17 @@
 
 ## Latest remote Appium directories
 - appium_onboarding:
-  - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-103327`
   - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-104826`
   - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-123321`
   - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-133355`
   - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-134629`
+  - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-140727`
 - appium_likes:
-  - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040014`
   - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040022`
   - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040404`
   - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-043635`
   - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-044905`
+  - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-051003`
 - appium_meeting:
   - `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100119`
   - `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100422`
@@ -33,3 +33,6 @@
   - `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-031823`
   - `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-034139`
   - `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-042040`
+
+## Latest automation run notes
+- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260314-141101.md`

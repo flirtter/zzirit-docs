@@ -1,0 +1,19 @@
+{
+  "run_id": "20260314-141101",
+  "state": "unknown",
+  "task_id": null,
+  "task_title": null,
+  "focus_section": null,
+  "focus_label": null,
+  "host_qa_status": "skipped",
+  "design_result_status": "skipped",
+  "auto_commit_sha": null,
+  "run_dir": "/Users/user/zzirit-v2/artifacts/automation/runs/20260314-141101",
+  "run_summary_path": "/Users/user/zzirit-v2/artifacts/automation/runs/20260314-141101/last-message.md",
+  "run_result_path": "/Users/user/zzirit-v2/artifacts/automation/runs/20260314-141101/result.json",
+  "host_qa_result_path": null,
+  "design_result_path": null,
+  "figma_bundle_summary_path": null,
+  "host_qa_overall_status": null,
+  "design_overall_status": null
+}

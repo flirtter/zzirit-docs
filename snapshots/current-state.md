@@ -1,6 +1,6 @@
 # Current State
 
-- generated_at: `2026-03-14 13:52:01 KST`
+- generated_at: `2026-03-14 14:11:55 KST`
 - memory_repo: `/Users/user/zzirit-memory-hub`
 
 ## Active repositories
@@ -20,10 +20,13 @@
 - likes_host_qa: `/Users/user/zzirit-v2/artifacts/manual-review/likes-host-qa-standalone-r3`
 - likes_release: `/Users/user/zzirit-v2/artifacts/manual-review/likes-release-20260314-130434`
 - chat_release: `/Users/user/zzirit-v2/artifacts/manual-review/chat-release-20260314-132352`
-- appium_onboarding: `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-103327`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-104826`
-- appium_likes: `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040014`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040022`
+- appium_onboarding: `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-104826`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-123321`
+- appium_likes: `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040022`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040404`
 - appium_meeting: `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100119`, `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100422`
 - appium_chat: `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-031245`, `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-031452`
+
+## Latest automation run notes
+- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260314-141101.md`
 
 ## Surface snapshot
 - `login`: state=`implemented`, qa=`onboarding_appium`, automation=`partial`
