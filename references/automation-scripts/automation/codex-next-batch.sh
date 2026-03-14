@@ -14,6 +14,7 @@ AGENT_STATE_FILE="$ARTIFACT_DIR/agent-state.json"
 NEXT_ACTION_FILE="$ARTIFACT_DIR/next-action.md"
 AGENT_STATE_SCRIPT="$ROOT/scripts/automation/update-agent-state.py"
 DESIGN_RESULT_SCRIPT="$ROOT/scripts/automation/write-design-result.py"
+MEMORY_HUB_NOTE_SCRIPT="$ROOT/scripts/automation/write-memory-hub-note.py"
 HOST_QA_SCRIPT="${ZZIRIT_AUTOMATION_HOST_QA_SCRIPT:-$ROOT/scripts/automation/run-focus-host-qa.sh}"
 BUNDLE_CONTEXT_SCRIPT="${ZZIRIT_AUTOMATION_FIGMA_BUNDLE_SCRIPT:-$ROOT/scripts/automation/prepare-figma-bundle-context.sh}"
 STATUS_FILE="$ARTIFACT_DIR/status.md"
@@ -373,6 +374,8 @@ host_qa_result_path=""
 host_qa_summary_path=""
 design_result_status="skipped"
 design_result_path=""
+memory_hub_note_path=""
+memory_hub_note_json_path=""
 
 write_run_result_json() {
   python3 - "$run_result" "$run_id" "$state" "$exit_code" "$run_dir" "$run_output" "$run_summary" "${focus_section:-}" "${focus_label:-}" "${task_id:-}" "${task_title:-}" "${host_qa_status:-skipped}" "${host_qa_result_path:-}" "${host_qa_summary_path:-}" "${figma_bundle_summary_path:-}" "${design_result_status:-skipped}" "${design_result_path:-}" "${auto_commit_sha:-}" <<'PY'
@@ -590,6 +593,41 @@ append_design_result_note() {
   } >> "$run_summary"
 }
 
+write_memory_hub_note_if_needed() {
+  memory_hub_note_path="$run_dir/memory-hub-note.md"
+  memory_hub_note_json_path="$run_dir/memory-hub-note.json"
+
+  if [ ! -f "$MEMORY_HUB_NOTE_SCRIPT" ]; then
+    return 0
+  fi
+
+  if python3 "$MEMORY_HUB_NOTE_SCRIPT" \
+    "$run_result" \
+    "$run_summary" \
+    "$run_dir" \
+    "$memory_hub_note_path" \
+    "$memory_hub_note_json_path" >/dev/null 2>&1; then
+    return 0
+  fi
+
+  memory_hub_note_path=""
+  memory_hub_note_json_path=""
+  return 0
+}
+
+append_memory_hub_note() {
+  if [ -z "${memory_hub_note_path:-}" ] || [ ! -f "$memory_hub_note_path" ]; then
+    return 0
+  fi
+
+  {
+    echo
+    echo "Memory hub note:"
+    echo "- markdown: $memory_hub_note_path"
+    echo "- json: ${memory_hub_note_json_path:-missing}"
+  } >> "$run_summary"
+}
+
 cat > "$STATUS_FILE" <<EOF
 # Automation Status
 
@@ -784,6 +822,8 @@ append_figma_bundle_context_note
 write_design_result_if_needed
 append_design_result_note
 write_run_result_json
+write_memory_hub_note_if_needed
+append_memory_hub_note
 update_agent_state_if_needed
 
 sync_latest_artifacts
