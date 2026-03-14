@@ -56,6 +56,8 @@ Repository Settings -> Secrets and variables -> Actions
   - pull request opened/reopened/synchronize 시 자동 리뷰
 - `.github/workflows/gemini-issue-triage.yml`
   - issue opened/reopened/edited 시 자동 triage
+- `.github/workflows/gemini-sanity-check.yml`
+  - Actions 탭에서 수동 실행하여 secret/모델 연결을 즉시 검증
 
 참고:
 - GitHub CLI 로그인이 없어도, 이 환경에 저장된 macOS 키체인 자격 증명으로 HTTPS push가 가능할 수 있다.

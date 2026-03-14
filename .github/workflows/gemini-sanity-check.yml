@@ -1,0 +1,47 @@
+name: Gemini Sanity Check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Gemini sanity check
+        id: gemini
+        uses: google-github-actions/run-gemini-cli@v0
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          gemini_model: ${{ vars.GEMINI_REVIEW_MODEL || 'gemini-2.5-flash' }}
+          gemini_cli_version: ${{ vars.GEMINI_CLI_VERSION || 'latest' }}
+          gemini_debug: ${{ vars.GEMINI_DEBUG || 'false' }}
+          upload_artifacts: true
+          prompt: |
+            Read this repository as the ZZIRIT memory hub.
+
+            Your task:
+            1. Identify the repository role in 2-3 sentences.
+            2. Name the three most important files a future agent should read first.
+            3. State whether the repository appears self-contained for context reconstruction, and mention any remaining limitation.
+
+            Keep the answer concise and operational.
+
+      - name: Write workflow summary
+        shell: bash
+        run: |
+          {
+            echo "## Gemini Sanity Check"
+            echo
+            echo "${SUMMARY}"
+          } >> "$GITHUB_STEP_SUMMARY"
+        env:
+          SUMMARY: ${{ steps.gemini.outputs.summary }}

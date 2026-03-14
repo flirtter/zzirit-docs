@@ -17,6 +17,7 @@ ZZIRIT 작업의 장기 기억 저장소다.
 - `references/automation-scripts/`: 실제 자동화/리뷰/e2e 스크립트 사본
 - `.github/ISSUE_TEMPLATE/`: QA, 디자인 갭, 자동화 플래키, 리팩토링 추적용 이슈 템플릿
 - `.github/workflows/`: Gemini PR review와 issue triage 자동화
+- `.github/workflows/gemini-sanity-check.yml`: Gemini 연결 상태를 수동 점검하는 sanity workflow
 - `GEMINI.md`: Gemini GitHub Action이 이 저장소를 읽을 때 따라야 할 저장소 전용 지침
 - `scripts/refresh_snapshot.py`: 현재 작업 트리와 Mac Studio 원격 상태를 다시 수집해 스냅샷을 갱신
 - `scripts/sync_context_assets.py`: `zzirit-v2` spec과 로컬 디자인 자산을 허브 안으로 복제
