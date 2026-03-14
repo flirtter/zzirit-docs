@@ -1,0 +1,76 @@
+Continue the next autonomous development batch in /Users/user/zzirit-v2.
+
+Requirements:
+- Treat the active automation focus as a 60-90 minute concentrated work session, not a tiny one-off patch.
+- Stay inside the current focus section for the whole session unless a hard external blocker prevents meaningful progress.
+- If the focus session is pinned or was manually retargeted, do not rotate to a different section for breadth balancing. Stay in that section until it is explicitly unpinned or a hard blocker stops all useful work.
+- When a focus session is pinned, treat consecutive batches as one continuous stream of work, not as unrelated mini-batches. Start by reading the latest completed summary for the same focus and continue the top unresolved subgoal before opening a new thread.
+- Prefer advancing one coherent subgoal across multiple batches over starting a fresh UI idea each run. Example: legacy comparison -> implement parity fix -> validate -> refine -> revalidate -> record remaining blocker.
+- Target roughly 85% completeness for the current section, then leave explicit blockers and move on. Do not chase the last 10-15% polish unless it removes a broad product blocker.
+- For UI focus sessions, prefer real user-visible progress over tool-only adjustments. A valid batch should normally leave at least one touched product file under `apps/mobile/app`, `apps/mobile/components`, `apps/mobile/features`, or the corresponding API/domain files that support the screen.
+- If the simulator is sitting on an unrelated stale screen, do not reason from that idle screen. Relaunch/reset the app on Mac Studio and drive the route you actually need to inspect.
+- Do not use the local MacBook simulator. All simulator and device work should happen on Mac Studio only.
+- Do not spend the batch trying to repair `CoreSimulatorService` from inside the Codex sandbox. Host-side simulator driving and capture will run outside the sandbox; use that path instead of repeatedly debugging `simctl` access.
+- Follow the active AGENTS instructions for /Users/user and the repository docs.
+- Do not ask for approval; make reasonable decisions and keep momentum.
+- Do not scan the entire home directory for AGENTS.md or instruction files. If `/Users/user/AGENTS.md` is absent, continue with the active instructions already supplied to the runner and the repository docs.
+- Keep filesystem scans scoped to `/Users/user/zzirit-v2` unless the batch explicitly needs `/Users/user/zzirit-rn`, `/Users/user/zzirit-api`, or remote Mac Studio paths.
+- Never read or print secret files or raw secret values (`.automation.env`, `.env*`, API keys, tokens, signing materials). If configuration is needed, rely on environment variables already loaded by the runner.
+- Inspect git status, recent commits, and docs/autonomous-work-log.md first.
+- Inspect the latest 1-2 automation summaries for the same focus section first and continue their unresolved thread unless there is a clearly higher-priority blocker in the same focus.
+- Inspect the latest advisory model review summary under `artifacts/model-review/` if present, but treat it as optional QA notes. Do not block, redirect, or expand scope solely because the review artifact is missing, stale, or noisy.
+- If the top review finding is outside the active focus section and fixing it would derail visible progress in the current section, record it as deferred and keep working on the active focus section.
+- Prefer Codex implementation and host QA in the main lane. Use Gemini review as a post-run advisory markdown artifact, not as a gate for finishing the batch. Only call Claude when the batch explicitly needs a planning-style review of product or architecture docs.
+- Do not run `npm run review:models`, `python3 scripts/review/multi-model-batch-review.py`, or equivalent model-review commands from the main Codex lane. Advisory Gemini review is produced separately and should remain a markdown artifact for later follow-up.
+- Choose the highest-leverage next batch and execute it end-to-end.
+- Prefer source-first closure of the active section over breadth heuristics. Finish the current section to a reviewable state with code, QA artifacts, and explicit blockers before switching sections.
+- Do not reset to broad rediscovery every batch once the focus is pinned. Re-read baseline/spec docs only when they are directly needed for the current unresolved subgoal or when the previous batch surfaced a contradiction.
+- Once a section reaches about `85%` and the remaining gap is polish, simulator friction, rate limit noise, or non-critical parity cleanup, record the blocker and move only when the active focus is not pinned.
+- Prefer spec-first, TDD, and verification with Mac Studio when useful.
+- Treat validation as part of implementation, not an optional follow-up.
+- Validate impacted server-app communication paths with the real API whenever possible.
+- If a batch touches external platform integrations such as uploads, notifications, auth, maps, or device permissions, verify the real integration path or record the exact remaining blocker.
+- Read the cached baseline docs first before fetching Figma again:
+  - `docs/spec/product-baseline.md`
+  - `docs/spec/design-baseline.md`
+  - `docs/spec/api-contract-baseline.md`
+  - `docs/spec/data-model-baseline.md`
+  - `docs/spec/gap-audit-20260308.md`
+- If `docs/spec/gap-audit-20260308.md` or recent review artifacts show open UI drift, prioritize UI/Figma parity before adding more backend durability or QA breadth.
+- For `lightning`, `meeting`, `chat`, and `my` focus sessions, inspect the matching legacy reference implementation in `/Users/user/zzirit-rn` before editing and carry over the product structure/behavior into the current architecture instead of inventing a new layout from scratch.
+- Use the legacy implementation in `/Users/user/zzirit-rn` as the behavioral and flow baseline until the new screen clearly surpasses it. The default sequence is: implement visible progress -> compare the resulting screen/flow against the legacy code and current result -> if the new result drifts without a clear product win, steer it back toward the legacy behavior/composition.
+- Only keep moving away from the legacy implementation when the new direction is demonstrably better: for example the screen now matches Figma more closely, preserves all legacy-required behavior, improves structure/maintainability, or exposes richer real-path QA than the legacy version. If that threshold is not met, keep converging toward the legacy baseline.
+- After each meaningful UI batch in `lightning`, `meeting`, `chat`, or `my`, explicitly record whether the current result is `below legacy`, `roughly at legacy`, or `beyond legacy`, and what evidence supports that judgment.
+- Do not introduce fixture or dummy data as the default path. Keep flows wired to real services and real backend responses unless an explicit fallback flag is already part of the product/runtime config.
+- If you find duplicate route owners, duplicate screens, or overlapping entry files, do not delete one blindly just to remove a router conflict. First audit whether the duplicate file contains unique product behavior, layout, copy, fixture composition, or navigation required by the plan/Figma/legacy app, then migrate that unique spec into the surviving owner before removing or skipping the duplicate.
+- When you remove or skip a duplicate owner, record which unique spec was migrated, which duplicate was dropped, and why the surviving file is now the single source of truth.
+- Current UI parity priority order:
+  1. unauthenticated entry/login
+  2. onboarding step parity
+  3. lightning tab visual parity
+  4. meeting list/detail parity
+  5. chat list/room parity
+  6. MY home and like list parity
+- Do not spend more than two consecutive batches in the same UI section unless there is a user-facing regression or a hard blocker that must be removed to let other sections move.
+- Keep design and planning aligned with the current Figma/design docs and the repo plan docs; note any drift you discover.
+- Do not treat placeholder-only implementations as meaningful parity progress. Examples: a fake map canvas instead of the designed map-driven lightning surface, a bare text list where the Figma shows cards/sheets, or a chat list wired to the wrong API contract.
+- Prefer cached Figma baseline artifacts over repeated full-file fetches. Only call Figma again when a changed screen lacks a cached node reference or needs a fresh node-level comparison.
+- If the Figma API is healthy again, refresh the full design catalog first with `npm run qa:figma:export-md` before broad parity sweeps.
+- While the Figma API is rate-limited, capture the exact target screen with `npm run qa:figma:capture-screen` and seed the cache before design comparison.
+- Before declaring a screen unmapped, inspect `artifacts/figma-api/design-file.json` and extend `scripts/review/figma-baseline-map.json`.
+- If the Figma API returns `429` or no image url, use the Playwright fallback path instead of stopping at the API blocker.
+- Do not open a second unrelated UI section just to preserve breadth if the active section still has obvious product drift or broken QA. Source fidelity and route-accurate verification for the active section take priority.
+- If a batch touches UI files (`apps/mobile/app`, `apps/mobile/components`, `apps/mobile/constants`, theme/style files), you must run `npm run qa:ios:figma`.
+- If a batch touches UI files (`apps/mobile/app`, `apps/mobile/components`, `apps/mobile/constants`, theme/style files), you must also run `npm run qa:ios:figma:strict`.
+- For UI batches, do not treat the work as design-verified unless the strict parity artifact reports `strict parity status: verified`.
+- `verified` is allowed only when the comparison used a canonical Figma reference and a fresh route-accurate app screenshot.
+- If the comparison used a fallback screenshot, proxy reference, manual reference, or any non-canonical source, record the exact blocker and leave the screenshot artifact, but do not claim parity is complete.
+- If `FIGMA_NODE_ID` or equivalent screen reference cannot be resolved, record that exact blocker and still leave the screenshot artifact.
+- Strict parity is a quality label, not a reason to stall the whole roadmap. After one meaningful strict attempt per touched screen, move forward if the remaining gap is in the last 10-15%.
+- Do not spend the whole batch only hardening parity scripts unless the current focus section is blocked by the tool itself. If a tooling fix is needed, pair it with the next visible screen attempt in the same section.
+- Prefer total checks that combine unit/integration tests, simulator QA, and Mac Studio verification for the area you changed.
+- Commit at logical boundaries.
+- Update docs/autonomous-work-log.md with what changed and what was verified.
+- End each batch by stating the exact next continuation step for the same focus so the following batch can resume with minimal rediscovery.
+- If blocked by an external limitation you cannot bypass, record it and move to the next useful batch instead of stopping.
+- End each run with a concise summary that can be written to the output-last-message file.

@@ -1,0 +1,8 @@
+SHELL=/bin/zsh
+PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/opt/homebrew/sbin
+
+# >>> zzirit-codex-auto >>>
+* * * * * /Users/user/zzirit-v2/scripts/automation/ensure-batch-loop.sh >/dev/null 2>&1
+* * * * * /Users/user/zzirit-v2/scripts/automation/ensure-parallel-manager.sh >/dev/null 2>&1
+* * * * * /Users/user/zzirit-v2/scripts/automation/monitor-next-batch.sh >/dev/null 2>&1
+# <<< zzirit-codex-auto <<<
