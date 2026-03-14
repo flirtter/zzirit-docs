@@ -1,0 +1,34 @@
+{
+  "imported_at": "20260314-011430",
+  "source": "/Users/user/Downloads/Design",
+  "signature": "6e5958d967cef15a8ed5755f44fbf9977e941745bf37fd399c3c8f38c889b1a1",
+  "sections": {
+    "chat": [
+      "chat/KakaoTalk_Photo_2026-03-12-17-50-46-1.png",
+      "chat/KakaoTalk_Photo_2026-03-12-17-50-46-2.png",
+      "chat/KakaoTalk_Photo_2026-03-12-17-50-46-3.png",
+      "chat/KakaoTalk_Photo_2026-03-12-17-50-46-4.png",
+      "chat/KakaoTalk_Photo_2026-03-12-17-50-46-5.png"
+    ],
+    "exception": [
+      "exception/KakaoTalk_Photo_2026-03-12-17-47-47-1.png",
+      "exception/KakaoTalk_Photo_2026-03-12-17-47-47-2.png",
+      "exception/KakaoTalk_Photo_2026-03-12-17-47-47-3.png"
+    ],
+    "meeting": [
+      "meeting/KakaoTalk_Photo_2026-03-12-17-52-54-1.png",
+      "meeting/KakaoTalk_Photo_2026-03-12-17-52-54-2.png",
+      "meeting/KakaoTalk_Photo_2026-03-12-17-52-54-3.png"
+    ],
+    "MY": [
+      "MY/KakaoTalk_Photo_2026-03-12-17-49-29-1.png",
+      "MY/KakaoTalk_Photo_2026-03-12-17-49-29-2.png",
+      "MY/KakaoTalk_Photo_2026-03-12-17-49-29-3.png",
+      "MY/KakaoTalk_Photo_2026-03-12-17-49-29-4.png",
+      "MY/KakaoTalk_Photo_2026-03-12-17-49-29-5.png",
+      "MY/KakaoTalk_Photo_2026-03-12-17-49-29-6.png",
+      "MY/KakaoTalk_Photo_2026-03-12-17-49-29-7.png",
+      "MY/KakaoTalk_Photo_2026-03-12-17-49-29-8.png"
+    ]
+  }
+}
