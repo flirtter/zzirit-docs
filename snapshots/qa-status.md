@@ -10,17 +10,17 @@
 
 ## Latest remote Appium directories
 - appium_onboarding:
-  - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-101125`
-  - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-101647`
   - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-103327`
   - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-104826`
   - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-123321`
+  - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-133355`
+  - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-134629`
 - appium_likes:
-  - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-015105`
-  - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-033559`
   - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040014`
   - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040022`
   - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040404`
+  - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-043635`
+  - `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-044905`
 - appium_meeting:
   - `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100119`
   - `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100422`

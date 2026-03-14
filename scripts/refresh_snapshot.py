@@ -391,6 +391,60 @@ def render_issue_backlog_md(current: dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def extract_spec_section(spec_text: str, heading: str) -> list[str]:
+    lines = spec_text.splitlines()
+    capture = False
+    collected: list[str] = []
+    heading_prefix = f"## {heading}"
+    for line in lines:
+        if line.strip() == heading_prefix:
+            capture = True
+            continue
+        if capture and line.startswith("## "):
+            break
+        if capture:
+            if line.strip():
+                collected.append(line.rstrip())
+    return collected
+
+
+def render_issue_backlog_detailed_md(current: dict[str, Any], surfaces: dict[str, Any]) -> str:
+    remote = current.get("remote_mac_studio", {})
+    automation = remote.get("automation", {})
+    queue = automation.get("task_queue", {})
+    tasks = queue.get("tasks", [])
+    spec_texts = surfaces.get("specs", {})
+    lines = [
+        "# Detailed Issue Backlog",
+        "",
+        "자동화 큐와 surface spec을 합쳐, 실제 이슈를 더 잘게 나눌 수 있도록 만든 세부 backlog다.",
+        "",
+    ]
+    for task in tasks:
+        if not isinstance(task, dict):
+            continue
+        if task.get("status") not in {"in_progress", "pending"}:
+            continue
+        section = task.get("section", "")
+        spec_text = spec_texts.get(section, "")
+        lines.append(f"## {task.get('id','')}")
+        lines.append("")
+        lines.append(f"- title: `{task.get('title','')}`")
+        lines.append(f"- section: `{section}`")
+        lines.append(f"- queue_status: `{task.get('status','')}`")
+        if task.get("source_next_step"):
+            lines.append(f"- follow_up_goal: `{task.get('source_next_step','')}`")
+        for heading in ["Canonical Routes", "Canonical Subroutes", "Canonical Tabs", "Canonical Flow", "Known Gaps", "Done Criteria"]:
+            extracted = extract_spec_section(spec_text, heading)
+            if not extracted:
+                continue
+            lines.append("")
+            lines.append(f"### {heading}")
+            lines.extend(extracted)
+        lines.append("")
+    return "\n".join(lines)
+
+
 def main() -> int:
     ensure_dirs()
 
@@ -407,6 +461,7 @@ def main() -> int:
     write_text(SNAPSHOT_ROOT / "automation-state.md", render_automation_state_md(remote))
     write_text(SNAPSHOT_ROOT / "qa-status.md", render_qa_status_md(remote))
     write_text(SNAPSHOT_ROOT / "issue-backlog.md", render_issue_backlog_md(current))
+    write_text(SNAPSHOT_ROOT / "issue-backlog-detailed.md", render_issue_backlog_detailed_md(current, surfaces))
     write_text(SNAPSHOT_ROOT / "git" / "zzirit-v2-commits.md", render_commits_md("zzirit-v2 Commits", v2["commits"]))
     write_text(SNAPSHOT_ROOT / "git" / "zzirit-proxy-commits.md", render_commits_md("zzirit-proxy Commits", proxy["commits"]))
 

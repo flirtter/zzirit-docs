@@ -11,9 +11,9 @@
 # Automation Status
 
 - state: running
-- run_id: 20260314-132438
-- started_at: 2026-03-14 13:24:39
-- run_dir: /Users/user/zzirit-v2/artifacts/automation/runs/20260314-132438
+- run_id: 20260314-135003
+- started_at: 2026-03-14 13:50:04
+- run_dir: /Users/user/zzirit-v2/artifacts/automation/runs/20260314-135003
 - focus_session_file: /Users/user/zzirit-v2/artifacts/automation/focus-session.json
 - focus_section: my
 - focus_label: MY/likes
@@ -22,7 +22,7 @@
 - focus_target: 85%
 - focus_goal: MY 홈과 like 목록을 85% 수준까지 구현하고 프로필/설정 흐름과 연결한다.
 - focus_started_at: 2026-03-14 13:24:39
-- focus_expires_at: 2026-03-14 14:39:39
+- focus_expires_at: 2026-03-14 15:05:03
 - surface_spec_path: /Users/user/zzirit-v2/docs/spec/surfaces/my.md
 - surface_spec_status: draft
 - surface_qa_level: host_qa
@@ -33,9 +33,9 @@
 ```md
 # Automation Health
 
-- checked_at: 2026-03-14 13:30:01
+- checked_at: 2026-03-14 13:51:00
 - state: running
-- run_id: 20260314-132438
+- run_id: 20260314-135003
 - issue: none
 - message: healthy
 ```
@@ -74,7 +74,7 @@
 - likes_host_qa: `/Users/user/zzirit-v2/artifacts/manual-review/likes-host-qa-standalone-r3`
 - likes_release: `/Users/user/zzirit-v2/artifacts/manual-review/likes-release-20260314-130434`
 - chat_release: `/Users/user/zzirit-v2/artifacts/manual-review/chat-release-20260314-132352`
-- appium_onboarding: `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-101125`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-101647`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-103327`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-104826`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-123321`
-- appium_likes: `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-015105`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-033559`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040014`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040022`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040404`
+- appium_onboarding: `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-103327`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-104826`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-123321`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-133355`, `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-134629`
+- appium_likes: `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040014`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040022`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-040404`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-043635`, `/Users/user/zzirit-v2/artifacts/appium-likes/20260314-044905`
 - appium_meeting: `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100119`, `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100422`, `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100626`, `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100721`, `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100842`
 - appium_chat: `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-031245`, `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-031452`, `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-031823`, `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-034139`, `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-042040`
