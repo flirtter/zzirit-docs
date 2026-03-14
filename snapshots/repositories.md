@@ -1,0 +1,161 @@
+# Repositories
+
+## zzirit-v2
+
+- path: `/Users/user/zzirit-v2`
+- branch: `feat/qa-foundation`
+- head: `0a4894f804e234d2f023bd0d2c32a8c067d265f9`
+- remotes:
+  - none
+- worktree_status:
+  - ` M .gitignore`
+  - ` M README.md`
+  - ` M apps/api/app/core/config.py`
+  - ` M apps/api/app/core/deps.py`
+  - ` M apps/api/app/domains/auth/models.py`
+  - ` M apps/api/app/domains/auth/repository.py`
+  - ` M apps/api/app/domains/auth/router.py`
+  - ` M apps/api/app/domains/auth/schemas.py`
+  - ` M apps/api/app/domains/auth/service.py`
+  - ` M apps/api/app/domains/chats/models.py`
+  - ` M apps/api/app/domains/chats/router.py`
+  - ` M apps/api/app/domains/chats/schemas.py`
+  - ` M apps/api/app/domains/chats/service.py`
+  - ` M apps/api/app/domains/locations/router.py`
+  - ` M apps/api/app/domains/meetings/router.py`
+  - ` M apps/api/app/domains/meetings/schemas.py`
+  - ` M apps/api/app/domains/notifications/models.py`
+  - ` M apps/api/app/domains/notifications/router.py`
+  - ` M apps/api/app/domains/notifications/schemas.py`
+  - ` M apps/api/app/domains/notifications/service.py`
+  - ` M apps/api/app/domains/uploads/router.py`
+  - ` M apps/api/app/domains/users/models.py`
+  - ` M apps/api/app/domains/users/repository.py`
+  - ` M apps/api/app/domains/users/schemas.py`
+  - ` M apps/api/app/main.py`
+  - ` M apps/api/pyproject.toml`
+  - ` M apps/api/tests/conftest.py`
+  - ` M apps/api/tests/test_meetings.py`
+  - ` M apps/api/tests/test_notifications.py`
+  - ` M apps/api/tests/test_users_auth.py`
+  - ` M apps/api/uv.lock`
+  - ` M apps/mobile/app.json`
+  - ` M apps/mobile/app/(tabs)/chatting.tsx`
+  - ` M apps/mobile/app/(tabs)/index.tsx`
+  - ` M apps/mobile/app/(tabs)/meeting.tsx`
+  - ` M apps/mobile/app/(tabs)/my.tsx`
+  - ` M apps/mobile/app/_layout.tsx`
+  - ` M apps/mobile/app/chattingroom.tsx`
+  - ` M apps/mobile/app/create-meeting.tsx`
+  - ` M apps/mobile/app/likes.tsx`
+  - ` M apps/mobile/app/login/email.tsx`
+  - ` M apps/mobile/app/login/index.tsx`
+  - ` M apps/mobile/app/meeting-detail.tsx`
+  - ` M apps/mobile/app/my-edit.tsx`
+  - ` M apps/mobile/app/onboarding/index.tsx`
+  - ` M apps/mobile/app/onboarding/notification-permission.tsx`
+  - ` M apps/mobile/app/onboarding/profile-setup.tsx`
+  - ` M apps/mobile/app/settings.tsx`
+  - ` M apps/mobile/app/signup.tsx`
+  - ` M apps/mobile/app/volt-charge.tsx`
+  - ` M apps/mobile/app/volt-history.tsx`
+  - ` M apps/mobile/components/ProfileCard.tsx`
+  - ` M apps/mobile/components/chat/ImageMessage.tsx`
+  - ` M apps/mobile/components/chat/LocationMessage.tsx`
+  - ` M apps/mobile/components/chat/MediaPicker.tsx`
+  - ` M apps/mobile/components/naverMap/FilterOverlay.tsx`
+  - ` M apps/mobile/components/naverMap/MeetingBubble.tsx`
+  - ` M apps/mobile/components/naverMap/NaverMap.tsx`
+  - ` M apps/mobile/components/naverMap/UserBubble.tsx`
+  - ` M apps/mobile/contexts/AuthContext.tsx`
+  - ` M apps/mobile/features/auth/social-auth.test.ts`
+  - ` M apps/mobile/features/auth/social-auth.ts`
+  - ` M apps/mobile/features/location/location-api.ts`
+  - ` M apps/mobile/features/notifications/notification-permissions.ts`
+  - ` M apps/mobile/features/notifications/push-registration.test.ts`
+  - ` M apps/mobile/features/notifications/push-registration.ts`
+  - ` M apps/mobile/features/onboarding/profile-setup-flow.test.ts`
+  - ` M apps/mobile/features/onboarding/profile-setup-flow.ts`
+  - ` M apps/mobile/features/shared/api-base-url.ts`
+  - ` M apps/mobile/features/shared/api-config.test.ts`
+  - ` M apps/mobile/hooks/useLocation.ts`
+  - ` M apps/mobile/package.json`
+  - ` M apps/mobile/providers/AppProviders.tsx`
+  - ` M apps/mobile/services/api.test.ts`
+  - ` M apps/mobile/services/api.ts`
+  - ` M apps/mobile/services/authService.ts`
+  - ` M apps/mobile/services/chatService.test.ts`
+  - ` M apps/mobile/services/chatService.ts`
+  - ` M apps/mobile/services/meetingService.ts`
+  - ` M apps/mobile/services/notificationService.ts`
+
+### Recent commits
+- `0a4894f (HEAD -> feat/qa-foundation, automation/gemini-backlog) feat: auto-commit successful automation batches`
+- `52ddd3e feat: record current automation activity`
+- `501711e chore: log dirty automation starts`
+- `d458e3b fix: narrow automation instruction discovery`
+- `37694e6 fix: clear stale automation errors when healthy`
+- `93b2c49 fix: escape automation prompt context`
+- `ad02516 chore: ignore mobile editor artifacts`
+- `0216df1 fix: harden automation secret handling`
+- `39925ab chore: require figma checks for ui batches`
+- `4e072fa fix: avoid recursive studio ssh in automation`
+- `553aa9f fix: allow remote automation runs in untrusted repo`
+- `8127139 chore: add automation health monitoring`
+- `3a001df feat: wire lightning likes to chat matches`
+- `6af3eae feat: add social auth scaffold`
+- `2bbcea5 feat: wire mobile notification token sync`
+- `694073b fix: stabilize onboarding qa flow`
+- `d0642ab chore: tighten automation validation scope`
+- `40e27db chore: add codex batch automation scripts`
+- `6c26181 feat: support chat image uploads`
+- `9e017a6 feat: add server-backed profile image uploads`
+- `6ba26f1 feat: add onboarding profile photo selection`
+- `a4b66b6 fix: upsert onboarding profiles before edit`
+- `dad51dc test: stabilize live ios onboarding flow`
+- `afad3e6 feat: enable profile photo selection in my edit`
+- `7087c94 feat: support partial profile updates`
+- `fb4c955 docs: record qa follow-up findings`
+- `0a3b7d4 feat: extend figma-aligned onboarding flow`
+- `5063a94 feat: align onboarding screens to figma`
+- `2f1f4d5 feat: add dual-target ios qa coverage`
+- `0461218 feat: enforce email auth credentials`
+
+## zzirit-proxy
+
+- path: `/Users/user/zzirit-proxy`
+- branch: `main`
+- head: `b4681ac918ada3e87e5c0cd9986b94629ea10430`
+- remotes:
+  - `origin	https://github.com/flirtter/zzirit-proxy.git (fetch)`
+  - `origin	https://github.com/flirtter/zzirit-proxy.git (push)`
+- worktree_status:
+  - ` M Dockerfile`
+  - ` M src/auth.py`
+  - ` M src/main.py`
+  - ` M src/routes.py`
+  - `?? .dockerignore`
+  - `?? mock_api.py`
+  - `?? run_local.sh`
+  - `?? test_client.py`
+  - `?? verify_e2e.sh`
+  - `?? verify_syntax.py`
+
+### Recent commits
+- `b4681ac (HEAD -> main, origin/main) [디버깅] 로그 추가`
+- `7dfb316 [디버깅] routing 출력`
+- `3794f50 [프록시] del 요청 허용`
+- `c05357b [프록시] post 관련 프록시 추가`
+- `b2775cd 라이브러리 추가`
+- `0e321d0 token 발급 방식 변경`
+- `0e090f1 refactoring : 권한 설정`
+- `cae6aa0 refactoring : 쿼리 파라미터 추가`
+- `8e841aa refactoring : requirements update`
+- `73d38f7 library 추가`
+- `9e6af80 logging 추가`
+- `ac77523 refactoring : real key 반영`
+- `3c2e7ad refactoring : 권한 설정 반영`
+- `2b83eb8 refactoring : 배포 시도 2트`
+- `c3aaef5 refactoring : 배포 실패`
+- `73fa7ef feat: Cloud Run 배포를 위한 Dockerfile 추가`
+- `629007c 초기 프로젝트 설정: FastAPI 기반 프록시 서버 구현`

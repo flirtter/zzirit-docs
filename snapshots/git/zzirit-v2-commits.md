@@ -1,0 +1,35 @@
+# zzirit-v2 Commits
+
+- `98171c3 2026-03-07 chore: bootstrap zzirit v2 workspace`
+- `615e00a 2026-03-07 chore: add ios visual qa foundation`
+- `521a80c 2026-03-07 chore: add ios appium smoke automation`
+- `0461218 2026-03-07 feat: enforce email auth credentials`
+- `2f1f4d5 2026-03-07 feat: add dual-target ios qa coverage`
+- `5063a94 2026-03-07 feat: align onboarding screens to figma`
+- `0a3b7d4 2026-03-07 feat: extend figma-aligned onboarding flow`
+- `fb4c955 2026-03-07 docs: record qa follow-up findings`
+- `7087c94 2026-03-07 feat: support partial profile updates`
+- `afad3e6 2026-03-07 feat: enable profile photo selection in my edit`
+- `dad51dc 2026-03-07 test: stabilize live ios onboarding flow`
+- `a4b66b6 2026-03-07 fix: upsert onboarding profiles before edit`
+- `6ba26f1 2026-03-07 feat: add onboarding profile photo selection`
+- `9e017a6 2026-03-08 feat: add server-backed profile image uploads`
+- `6c26181 2026-03-08 feat: support chat image uploads`
+- `40e27db 2026-03-08 chore: add codex batch automation scripts`
+- `d0642ab 2026-03-08 chore: tighten automation validation scope`
+- `694073b 2026-03-08 fix: stabilize onboarding qa flow`
+- `2bbcea5 2026-03-08 feat: wire mobile notification token sync`
+- `6af3eae 2026-03-08 feat: add social auth scaffold`
+- `3a001df 2026-03-08 feat: wire lightning likes to chat matches`
+- `8127139 2026-03-08 chore: add automation health monitoring`
+- `553aa9f 2026-03-08 fix: allow remote automation runs in untrusted repo`
+- `4e072fa 2026-03-08 fix: avoid recursive studio ssh in automation`
+- `39925ab 2026-03-08 chore: require figma checks for ui batches`
+- `0216df1 2026-03-08 fix: harden automation secret handling`
+- `ad02516 2026-03-08 chore: ignore mobile editor artifacts`
+- `93b2c49 2026-03-08 fix: escape automation prompt context`
+- `37694e6 2026-03-08 fix: clear stale automation errors when healthy`
+- `d458e3b 2026-03-08 fix: narrow automation instruction discovery`
+- `501711e 2026-03-08 chore: log dirty automation starts`
+- `52ddd3e 2026-03-08 feat: record current automation activity`
+- `0a4894f 2026-03-08 feat: auto-commit successful automation batches`
