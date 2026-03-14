@@ -1,0 +1,55 @@
+name: Gemini PR Review
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  review:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Gemini review
+        uses: google-github-actions/run-gemini-cli@v0
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          gemini_cli_version: ${{ vars.GEMINI_CLI_VERSION || 'latest' }}
+          gemini_model: ${{ vars.GEMINI_REVIEW_MODEL || 'gemini-2.5-pro' }}
+          gemini_debug: ${{ vars.GEMINI_DEBUG || 'false' }}
+          upload_artifacts: true
+          prompt: |
+            Review this pull request for the ZZIRIT Memory Hub repository.
+
+            Repository purpose:
+            - preserve long-term memory for ZZIRIT work
+            - track QA, automation state, design references, and follow-up backlog
+            - vendor context from zzirit-v2 and related runtime workflows
+
+            Review goals:
+            1. Summarize the operational impact of this PR.
+            2. Find real problems in snapshot fidelity, reference completeness, workflow correctness, or backlog consistency.
+            3. Flag missing documentation or missing snapshot refresh steps.
+            4. Leave concise, actionable review feedback only for real issues.
+
+            Review priorities:
+            - broken or stale paths
+            - inconsistent state between snapshots, specs, and issue backlog
+            - workflow mistakes that would break sync, refresh, or automation loops
+            - missing vendored context required to reconstruct surface status
+
+            Avoid low-signal style commentary unless it affects maintainability or reproducibility.

@@ -1,0 +1,61 @@
+name: Gemini Issue Triage
+
+on:
+  issues:
+    types:
+      - opened
+      - reopened
+      - edited
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Gemini triage
+        uses: google-github-actions/run-gemini-cli@v0
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          gemini_cli_version: ${{ vars.GEMINI_CLI_VERSION || 'latest' }}
+          gemini_model: ${{ vars.GEMINI_TRIAGE_MODEL || 'gemini-2.5-flash' }}
+          gemini_debug: ${{ vars.GEMINI_DEBUG || 'false' }}
+          upload_artifacts: true
+          prompt: |
+            Triage this GitHub issue for the ZZIRIT Memory Hub repository.
+
+            Repository purpose:
+            - preserve long-term memory for ZZIRIT work
+            - track QA, automation state, surface specs, and design references
+            - provide enough context that future work can resume from the hub alone
+
+            Triage goals:
+            1. Identify the most relevant area:
+               - surface:login
+               - surface:onboarding
+               - surface:my
+               - surface:likes
+               - surface:meeting
+               - surface:chat
+               - surface:automation
+            2. Identify whether the issue is mainly:
+               - qa
+               - design-gap
+               - flake
+               - refactor
+               - automation
+            3. Comment with:
+               - a short triage summary
+               - suggested labels
+               - the most relevant spec/snapshot/reference paths
+               - whether the issue looks actionable, blocked, or missing context
+
+            Prefer concrete repository paths over generic advice.
