@@ -13,10 +13,12 @@
 cd /Users/user/zzirit-memory-hub
 python3 scripts/sync_context_assets.py
 python3 scripts/refresh_snapshot.py
+python3 scripts/export_project_seed.py
 ```
 
 참고:
 - `refresh_snapshot.py` 는 Mac Studio 최신 host QA/Appium 아티팩트와 `automation-run-notes` 사본까지 같이 갱신한다.
+- `export_project_seed.py` 는 현재 open issue를 GitHub Projects seed CSV/JSON으로 저장한다.
 
 2. 변경 확인
 ```bash
@@ -62,3 +64,5 @@ Repository Settings -> Secrets and variables -> Actions
 참고:
 - GitHub CLI 로그인이 없어도, 이 환경에 저장된 macOS 키체인 자격 증명으로 HTTPS push가 가능할 수 있다.
 - 필요하면 이후 `gh auth login`을 추가로 해두면 이슈/라벨/프로젝트 자동화가 더 편해진다.
+- GitHub Projects를 실제 생성하려면 토큰 scope에 `read:project`, `project`, `read:org` 가 더 필요하다.
+- scope 확인과 부트스트랩 안내는 `python3 scripts/bootstrap_github_project.py` 로 볼 수 있다.

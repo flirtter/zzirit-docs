@@ -21,6 +21,9 @@ ZZIRIT 작업의 장기 기억 저장소다.
 - `GEMINI.md`: Gemini GitHub Action이 이 저장소를 읽을 때 따라야 할 저장소 전용 지침
 - `scripts/refresh_snapshot.py`: 현재 작업 트리와 Mac Studio 원격 상태를 다시 수집해 스냅샷을 갱신
 - `scripts/sync_context_assets.py`: `zzirit-v2` spec과 로컬 디자인 자산을 허브 안으로 복제
+- `scripts/export_project_seed.py`: 현재 이슈를 GitHub Projects seed CSV/JSON으로 변환
+- `scripts/bootstrap_github_project.py`: GitHub Project scope 확인과 부트스트랩 안내
+- `playbooks/github-projects.md`: GitHub Projects 운영 규칙과 필드/뷰 설계
 - `PUBLISHING.md`: GitHub 원격 레포 생성/푸시 절차
 
 기본 운영 원칙:
@@ -58,15 +61,24 @@ ZZIRIT 작업의 장기 기억 저장소다.
   - `automation`
 
 현재 생성된 초기 이슈:
-- `#1` `my-followup`
-- `#2` `onboarding-followup`
-- `#3` `login-followup`
-- `#4` `meeting-followup`
-- `#5` `likes-followup`
+- `#1` `[my-followup] MY 후속 정리`
+- `#2` `[onboarding-followup] 온보딩 후속 정리`
+- `#3` `[login-followup] 로그인 후속 정리`
+- `#4` `[meeting-followup] 미팅 후속 정리`
+- `#5` `[likes-followup] 좋아요 후속 정리`
+
+GitHub Projects 운영:
+- 이슈는 맥락과 작업 단위
+- Projects는 현재 상태판
+- 권장 프로젝트 이름은 `ZZIRIT Delivery`
+- 필드/뷰 설계는 `playbooks/github-projects.md` 참고
+- 현재 토큰 scope 부족으로 Project API 생성은 아직 미반영
+- 대신 `scripts/export_project_seed.py` 가 현재 이슈를 project seed 파일로 생성한다.
 
 갱신:
 ```bash
 cd /Users/user/zzirit-memory-hub
 python3 scripts/sync_context_assets.py
 python3 scripts/refresh_snapshot.py
+python3 scripts/export_project_seed.py
 ```
