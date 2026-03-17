@@ -44,34 +44,34 @@
 
 - title: `My follow-up`
 - section: `my`
-- queue_status: `in_progress`
+- queue_status: `done`
 - follow_up_goal: `promote release clean capture for subroutes`
 
 ## onboarding-followup
 
 - title: `Onboarding follow-up`
 - section: `onboarding`
-- queue_status: `pending`
+- queue_status: `done`
 - follow_up_goal: `stabilize release-only capture path for post-onboarding expansion states`
 
 ## login-followup
 
 - title: `Login follow-up`
 - section: `login`
-- queue_status: `pending`
+- queue_status: `blocked`
 - follow_up_goal: `promote dedicated login host QA after spec confirmation`
 
 ## meeting-followup
 
 - title: `Meeting follow-up`
 - section: `meeting`
-- queue_status: `pending`
+- queue_status: `done`
 - follow_up_goal: `final spacing polish and release clean capture`
 
 ## likes-followup
 
 - title: `Likes follow-up`
 - section: `likes`
-- queue_status: `pending`
+- queue_status: `done`
 - follow_up_goal: `promote likes review into design gate with release captures`
 

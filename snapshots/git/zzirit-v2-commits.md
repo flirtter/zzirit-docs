@@ -33,3 +33,13 @@
 - `501711e 2026-03-08 chore: log dirty automation starts`
 - `52ddd3e 2026-03-08 feat: record current automation activity`
 - `0a4894f 2026-03-08 feat: auto-commit successful automation batches`
+- `645bc74 2026-03-14 feat: emit memory hub notes from automation batches`
+- `89c30d9 2026-03-14 feat: advance live auth and seeded qa automation`
+- `1604ef9 2026-03-14 chore: add gemini pr review workflows`
+- `5cca4ba 2026-03-14 chore: add pre-pr qa orchestration gate`
+- `de3d93e 2026-03-14 fix: restore upload review fallback auth`
+- `5a61a37 2026-03-14 fix: unblock stale parallel review scheduling`
+- `6d5e4d2 2026-03-14 chore: add local pr review runner`
+- `6f8efd7 2026-03-15 fix: harden auth and upload handling`
+- `0dcd611 2026-03-15 fix: gate x-user-id auth to tests`
+- `4db1749 2026-03-15 fix: restrict auth self-assertion paths`

@@ -4,93 +4,25 @@
 
 - path: `/Users/user/zzirit-v2`
 - branch: `feat/qa-foundation`
-- head: `0a4894f804e234d2f023bd0d2c32a8c067d265f9`
+- head: `4db17498e5828cdef09bba8307f5c99032d7ae5d`
 - remotes:
-  - none
+  - `origin	https://github.com/ahg0223/zzirit-v2.git (fetch)`
+  - `origin	https://github.com/ahg0223/zzirit-v2.git (push)`
 - worktree_status:
-  - ` M .gitignore`
-  - ` M README.md`
-  - ` M apps/api/app/core/config.py`
-  - ` M apps/api/app/core/deps.py`
-  - ` M apps/api/app/domains/auth/models.py`
-  - ` M apps/api/app/domains/auth/repository.py`
-  - ` M apps/api/app/domains/auth/router.py`
-  - ` M apps/api/app/domains/auth/schemas.py`
-  - ` M apps/api/app/domains/auth/service.py`
-  - ` M apps/api/app/domains/chats/models.py`
-  - ` M apps/api/app/domains/chats/router.py`
-  - ` M apps/api/app/domains/chats/schemas.py`
-  - ` M apps/api/app/domains/chats/service.py`
-  - ` M apps/api/app/domains/locations/router.py`
-  - ` M apps/api/app/domains/meetings/router.py`
-  - ` M apps/api/app/domains/meetings/schemas.py`
-  - ` M apps/api/app/domains/notifications/models.py`
-  - ` M apps/api/app/domains/notifications/router.py`
-  - ` M apps/api/app/domains/notifications/schemas.py`
-  - ` M apps/api/app/domains/notifications/service.py`
-  - ` M apps/api/app/domains/uploads/router.py`
-  - ` M apps/api/app/domains/users/models.py`
-  - ` M apps/api/app/domains/users/repository.py`
-  - ` M apps/api/app/domains/users/schemas.py`
-  - ` M apps/api/app/main.py`
-  - ` M apps/api/pyproject.toml`
-  - ` M apps/api/tests/conftest.py`
-  - ` M apps/api/tests/test_meetings.py`
-  - ` M apps/api/tests/test_notifications.py`
-  - ` M apps/api/tests/test_users_auth.py`
-  - ` M apps/api/uv.lock`
-  - ` M apps/mobile/app.json`
-  - ` M apps/mobile/app/(tabs)/chatting.tsx`
-  - ` M apps/mobile/app/(tabs)/index.tsx`
-  - ` M apps/mobile/app/(tabs)/meeting.tsx`
-  - ` M apps/mobile/app/(tabs)/my.tsx`
-  - ` M apps/mobile/app/_layout.tsx`
-  - ` M apps/mobile/app/chattingroom.tsx`
-  - ` M apps/mobile/app/create-meeting.tsx`
-  - ` M apps/mobile/app/likes.tsx`
-  - ` M apps/mobile/app/login/email.tsx`
-  - ` M apps/mobile/app/login/index.tsx`
-  - ` M apps/mobile/app/meeting-detail.tsx`
-  - ` M apps/mobile/app/my-edit.tsx`
-  - ` M apps/mobile/app/onboarding/index.tsx`
-  - ` M apps/mobile/app/onboarding/notification-permission.tsx`
-  - ` M apps/mobile/app/onboarding/profile-setup.tsx`
-  - ` M apps/mobile/app/settings.tsx`
-  - ` M apps/mobile/app/signup.tsx`
-  - ` M apps/mobile/app/volt-charge.tsx`
-  - ` M apps/mobile/app/volt-history.tsx`
-  - ` M apps/mobile/components/ProfileCard.tsx`
-  - ` M apps/mobile/components/chat/ImageMessage.tsx`
-  - ` M apps/mobile/components/chat/LocationMessage.tsx`
-  - ` M apps/mobile/components/chat/MediaPicker.tsx`
-  - ` M apps/mobile/components/naverMap/FilterOverlay.tsx`
-  - ` M apps/mobile/components/naverMap/MeetingBubble.tsx`
-  - ` M apps/mobile/components/naverMap/NaverMap.tsx`
-  - ` M apps/mobile/components/naverMap/UserBubble.tsx`
-  - ` M apps/mobile/contexts/AuthContext.tsx`
-  - ` M apps/mobile/features/auth/social-auth.test.ts`
-  - ` M apps/mobile/features/auth/social-auth.ts`
-  - ` M apps/mobile/features/location/location-api.ts`
-  - ` M apps/mobile/features/notifications/notification-permissions.ts`
-  - ` M apps/mobile/features/notifications/push-registration.test.ts`
-  - ` M apps/mobile/features/notifications/push-registration.ts`
-  - ` M apps/mobile/features/onboarding/profile-setup-flow.test.ts`
-  - ` M apps/mobile/features/onboarding/profile-setup-flow.ts`
-  - ` M apps/mobile/features/shared/api-base-url.ts`
-  - ` M apps/mobile/features/shared/api-config.test.ts`
-  - ` M apps/mobile/hooks/useLocation.ts`
-  - ` M apps/mobile/package.json`
-  - ` M apps/mobile/providers/AppProviders.tsx`
-  - ` M apps/mobile/services/api.test.ts`
-  - ` M apps/mobile/services/api.ts`
-  - ` M apps/mobile/services/authService.ts`
-  - ` M apps/mobile/services/chatService.test.ts`
-  - ` M apps/mobile/services/chatService.ts`
-  - ` M apps/mobile/services/meetingService.ts`
-  - ` M apps/mobile/services/notificationService.ts`
+  - clean
 
 ### Recent commits
-- `0a4894f (HEAD -> feat/qa-foundation, automation/gemini-backlog) feat: auto-commit successful automation batches`
+- `4db1749 (HEAD -> feat/qa-foundation, origin/feat/qa-foundation) fix: restrict auth self-assertion paths`
+- `0dcd611 fix: gate x-user-id auth to tests`
+- `6f8efd7 fix: harden auth and upload handling`
+- `6d5e4d2 chore: add local pr review runner`
+- `5a61a37 fix: unblock stale parallel review scheduling`
+- `de3d93e fix: restore upload review fallback auth`
+- `5cca4ba chore: add pre-pr qa orchestration gate`
+- `1604ef9 chore: add gemini pr review workflows`
+- `89c30d9 feat: advance live auth and seeded qa automation`
+- `645bc74 feat: emit memory hub notes from automation batches`
+- `0a4894f feat: auto-commit successful automation batches`
 - `52ddd3e feat: record current automation activity`
 - `501711e chore: log dirty automation starts`
 - `d458e3b fix: narrow automation instruction discovery`
@@ -110,16 +42,6 @@
 - `40e27db chore: add codex batch automation scripts`
 - `6c26181 feat: support chat image uploads`
 - `9e017a6 feat: add server-backed profile image uploads`
-- `6ba26f1 feat: add onboarding profile photo selection`
-- `a4b66b6 fix: upsert onboarding profiles before edit`
-- `dad51dc test: stabilize live ios onboarding flow`
-- `afad3e6 feat: enable profile photo selection in my edit`
-- `7087c94 feat: support partial profile updates`
-- `fb4c955 docs: record qa follow-up findings`
-- `0a3b7d4 feat: extend figma-aligned onboarding flow`
-- `5063a94 feat: align onboarding screens to figma`
-- `2f1f4d5 feat: add dual-target ios qa coverage`
-- `0461218 feat: enforce email auth credentials`
 
 ## zzirit-proxy
 

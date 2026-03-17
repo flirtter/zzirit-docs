@@ -50,16 +50,38 @@ def now_timestamp() -> int:
     return int(datetime.now().timestamp())
 
 
+def effective_main_state(
+    worker: dict,
+    automation_status_file: Path,
+    automation_status: dict[str, str],
+) -> tuple[str, str]:
+    state = automation_status.get("state", "")
+    if state != "running":
+        return state, "state-not-running"
+
+    stale_seconds = int(worker.get("main_run_stale_seconds", 7200))
+    started_at = parse_timestamp(automation_status.get("started_at", ""))
+    if started_at is not None and now_timestamp() - started_at > stale_seconds:
+        return "stale-running", "started_at-stale"
+
+    if automation_status_file.exists():
+        age_seconds = now_timestamp() - int(automation_status_file.stat().st_mtime)
+        if age_seconds > stale_seconds:
+            return "stale-running", "status-file-stale"
+
+    return state, "fresh-running"
+
+
 def ready_gemini_review(
     worker: dict,
     artifact_root: Path,
+    automation_status_file: Path,
     automation_status: dict[str, str],
 ) -> tuple[bool, str]:
     cooldown_seconds = int(worker.get("cooldown_seconds", 900))
     max_running_seconds = int(worker.get("max_running_seconds", max(cooldown_seconds, 900)))
     run_id = automation_status.get("run_id", "")
-    state = automation_status.get("state", "")
-    run_dir = Path(automation_status.get("run_dir", ""))
+    state, _state_reason = effective_main_state(worker, automation_status_file, automation_status)
     control = load_json(artifact_root / worker["key"] / "control.json")
     worker_status = parse_status_markdown(artifact_root / worker["key"] / "status.md")
 
@@ -96,13 +118,14 @@ def ready_gemini_review(
 def ready_gemini_coder(
     worker: dict,
     artifact_root: Path,
+    automation_status_file: Path,
     automation_status: dict[str, str],
 ) -> tuple[bool, str]:
     cooldown_seconds = int(worker.get("cooldown_seconds", 1800))
     control = load_json(artifact_root / worker["key"] / "control.json")
     last_finished_at = int(control.get("last_finished_at_ts", 0) or 0)
     active_focus = automation_status.get("focus_section", "none")
-    main_state = automation_status.get("state", "")
+    main_state, _state_reason = effective_main_state(worker, automation_status_file, automation_status)
     now_ts = now_timestamp()
 
     if main_state not in {"running", "success"}:
@@ -139,9 +162,19 @@ def main() -> int:
             continue
         runner = worker.get("runner", "codex")
         if runner == "gemini-review":
-            ready, trigger = ready_gemini_review(worker, artifact_root, automation_status)
+            ready, trigger = ready_gemini_review(
+                worker,
+                artifact_root,
+                automation_status_file,
+                automation_status,
+            )
         elif runner == "gemini-coder":
-            ready, trigger = ready_gemini_coder(worker, artifact_root, automation_status)
+            ready, trigger = ready_gemini_coder(
+                worker,
+                artifact_root,
+                automation_status_file,
+                automation_status,
+            )
         else:
             ready, trigger = False, "unsupported-runner"
 

@@ -77,6 +77,7 @@
 - `references/automation-scripts/automation/parallel-scheduler.py`
 - `references/automation-scripts/automation/parallel-specs.json`
 - `references/automation-scripts/automation/parallel-worker.sh`
+- `references/automation-scripts/automation/pre-pr-gate.sh`
 - `references/automation-scripts/automation/prepare-figma-bundle-context.sh`
 - `references/automation-scripts/automation/run-focus-host-qa.sh`
 - `references/automation-scripts/automation/select-focus-session.py`
@@ -127,6 +128,7 @@
 - `references/automation-scripts/review/ios-responsive-check.sh`
 - `references/automation-scripts/review/ios-simulator-login-seeded-account.sh`
 - `references/automation-scripts/review/ios-visual-check.sh`
+- `references/automation-scripts/review/local-pr-review.py`
 - `references/automation-scripts/review/multi-model-batch-review.py`
 - `references/automation-scripts/review/ollama-plan-review.sh`
 - `references/automation-scripts/review/open-figma-auth-session.sh`

@@ -1,0 +1,19 @@
+{
+  "run_id": "20260315-092915",
+  "state": "success",
+  "task_id": null,
+  "task_title": null,
+  "focus_section": "likes",
+  "focus_label": "likes",
+  "host_qa_status": "blocked",
+  "design_result_status": "blocked",
+  "auto_commit_sha": "c2791cf",
+  "run_dir": "/Users/user/zzirit-v2/artifacts/automation/runs/20260315-092915",
+  "run_summary_path": "/Users/user/zzirit-v2/artifacts/automation/runs/20260315-092915/last-message.md",
+  "run_result_path": "/Users/user/zzirit-v2/artifacts/automation/runs/20260315-092915/result.json",
+  "host_qa_result_path": "/Users/user/zzirit-v2/artifacts/automation/runs/20260315-092915/focus-host-qa-result.json",
+  "design_result_path": "/Users/user/zzirit-v2/artifacts/automation/runs/20260315-092915/design-result.json",
+  "figma_bundle_summary_path": null,
+  "host_qa_overall_status": "blocked",
+  "design_overall_status": "blocked"
+}

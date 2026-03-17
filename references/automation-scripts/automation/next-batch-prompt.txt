@@ -23,6 +23,8 @@ Requirements:
 - Prefer Codex implementation and host QA in the main lane. Use Gemini review as a post-run advisory markdown artifact, not as a gate for finishing the batch. Only call Claude when the batch explicitly needs a planning-style review of product or architecture docs.
 - Do not run `npm run review:models`, `python3 scripts/review/multi-model-batch-review.py`, or equivalent model-review commands from the main Codex lane. Advisory Gemini review is produced separately and should remain a markdown artifact for later follow-up.
 - Choose the highest-leverage next batch and execute it end-to-end.
+- When the active section reaches a reviewable cut, prefer `focused QA -> PR handoff` over continuing to polish the same section in-place.
+- Before opening or recommending a PR for the active section, run `npm run qa:pre-pr -- <focus-section>` or the equivalent direct script and record the summary path.
 - Prefer source-first closure of the active section over breadth heuristics. Finish the current section to a reviewable state with code, QA artifacts, and explicit blockers before switching sections.
 - Do not reset to broad rediscovery every batch once the focus is pinned. Re-read baseline/spec docs only when they are directly needed for the current unresolved subgoal or when the previous batch surfaced a contradiction.
 - Once a section reaches about `85%` and the remaining gap is polish, simulator friction, rate limit noise, or non-critical parity cleanup, record the blocker and move only when the active focus is not pinned.
@@ -52,6 +54,7 @@ Requirements:
   5. chat list/room parity
   6. MY home and like list parity
 - Do not spend more than two consecutive batches in the same UI section unless there is a user-facing regression or a hard blocker that must be removed to let other sections move.
+- If two consecutive batches in the same focus fail to produce either a meaningful product diff, a fresh QA artifact, or a concrete blocker note, stop and retarget through orchestration instead of digging deeper.
 - Keep design and planning aligned with the current Figma/design docs and the repo plan docs; note any drift you discover.
 - Do not treat placeholder-only implementations as meaningful parity progress. Examples: a fake map canvas instead of the designed map-driven lightning surface, a bare text list where the Figma shows cards/sheets, or a chat list wired to the wrong API contract.
 - Prefer cached Figma baseline artifacts over repeated full-file fetches. Only call Figma again when a changed screen lacks a cached node reference or needs a fresh node-level comparison.
