@@ -1,60 +1,55 @@
 ---
 surface: meeting
-spec_status: draft
+spec_status: stable
 qa_level: host_qa
 automation_status: high
 ---
 
-# Meeting Surface Contract
+# Meeting (미팅/소개팅) Surface Spec
 
-## Source Order
+## 1. 미팅/소개팅 목록
 
-1. Manual design bundle:
-   - `/Users/user/zzirit-v2/artifacts/manual-design-references/latest/meeting`
-2. Latest Appium review:
-   - `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100842/summary.md`
-3. Latest host QA wrapper:
-   - `/Users/user/zzirit-v2/artifacts/manual-review/meeting-host-qa-20260314-r5/focus-host-qa-summary.md`
-4. Current implementation targets:
-   - `/Users/user/zzirit-v2/apps/mobile/app/(tabs)/meeting.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/create-meeting.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/meeting-detail.tsx`
+### 1-a. 필터
+- **지역**: 서울/경기/인천, 대전/충청/세종, 대구/울산/경상북, 부산/경상남, 광주/전라, 강원, 제주
+  - 위치 ON: 해당 지역 매핑, OFF: 서울/경기/인천 기본
+- **성별**: 남성, 여성
+- **인원**: 1~10
+- **날짜**: 오늘 이후 날짜, 0년 0월 0일 형식
+- **카테고리**: 🍳식사/☕카페/🍻주점/🍷와인/🍸바(BAR)/🎬영화/🏃운동/🎸공연/🖼전시/🚘드라이브/⚡기타
+- **정렬**: 최근 올린 순 (기본) / 가까운 일정 순
 
-## Canonical Routes
+### 1-b. 게시글 총 개수
+- 999 초과: 999+, 마감 포함
 
-- `/meeting`
-- `/create-meeting`
-- `/meeting-detail?id=<id>`
+### 1-d. 목록
+- 무한 스크롤, 모집 완료/미완료 모두 노출
+- 정렬: 1순위 필터 → 2순위 모집완료>미완료
+- **구성**: 썸네일(이모지 랜덤), 제목(1줄 말줄임), 장소(2depth 00구), 시간(오늘/내일/N월 M일), 성별+인원, 조회수
 
-## Non-Negotiable Structure
+### 1-5. 등록 버튼
+- 탭 → 등록 화면 이동
 
-- Meeting list is filter-first and card-based.
-- Create meeting is a structured form with location selection, not a loose stack of inputs.
-- Meeting detail must read like a social-event detail surface with author, metadata, body, and CTA hierarchy.
+## 2. 글 상세
+- 카테고리, 제목, 장소(정확), 일정
+- 이름: 동물 랜덤 익명
+- 올린 시간: N분/N시간/N일 전/방금
+- 본문, 사진(크롭), 해시태그
 
-## Data Rules
+### 2-a. 채팅하기 버튼
+- 무료 5회: 차감 확인 팝업 → 만들기 → 채팅방 이동
+- 유료: 15볼트 차감 확인 팝업
 
-- Review seed must provide multiple meeting cards.
-- Meeting responses must normalize author and card metadata consistently.
-- Location picker and detail route must work from seeded data.
+### 2-b. 모집 마감 (작성자)
+- 플로팅 버튼 → 확인 팝업
+- 마감 시: 목록 딤드+맨 아래, 채팅하기 비활성화
 
-## QA Snapshot
-
-- Latest Appium review is success:
-  `/Users/user/zzirit-v2/artifacts/appium-meeting/20260314-100842/summary.md`
-- Host QA wrapper is success:
-  `/Users/user/zzirit-v2/artifacts/manual-review/meeting-host-qa-20260314-r5/focus-host-qa-summary.md`
-- Latest fresh manual capture set:
-  `/Users/user/zzirit-v2/artifacts/manual-review/meeting-20260314-r3`
-
-## Known Gaps
-
-- Spacing and form density can still be tightened further against the design.
-- Release-only clean capture path is not yet the sole source of truth.
-
-## Done Criteria
-
-- List, create, and detail all pass their dedicated Appium review.
-- Host QA wrapper can reuse those artifacts without flaky permission-state divergence.
-- Meeting can remain in `done` state without manual patching between runs.
-
+## 3. 올리기 화면
+- 기존 창 위에 띄움, 하단 4탭 미노출
+- **카테고리**: 식사~기타 (이모지 없이)
+- **제목**: 필수, 최대 50자
+- **날짜/시간**: 필수, 캘린더뷰(오늘~1년후), 시간 30분 단위
+- **위치**: 필수, 지도 핀 or 검색
+- **성별/인원**: 필수, 인원 최대 10 (초과 시 얼럿)
+- **키워드**: 필수 1~3개, 각 50자
+- **추가 설명**: 선택, 최대 100자
+- **등록 버튼**: 필수값 모두 입력 시 활성화

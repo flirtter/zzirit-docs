@@ -1,98 +1,13 @@
 {
-  "version": 1,
-  "updated_at": "2026-03-14",
-  "surfaces": [
-    {
-      "id": "login",
-      "spec_status": "draft",
-      "design_reference": "manual-review-entry-and-auth-images",
-      "qa_level": "onboarding_appium",
-      "automation_status": "partial",
-      "current_state": "implemented",
-      "blockers": [
-        "social auth and password recovery still need real-account live verification"
-      ],
-      "next_step": "promote dedicated login host QA after spec confirmation"
-    },
-    {
-      "id": "onboarding",
-      "spec_status": "draft",
-      "design_reference": "manual-user-images-plus-latest-appium-captures",
-      "qa_level": "host_qa",
-      "automation_status": "high",
-      "current_state": "implemented",
-      "blockers": [],
-      "next_step": "stabilize release-only capture path for post-onboarding expansion states"
-    },
-    {
-      "id": "my",
-      "spec_status": "draft",
-      "design_reference": "manual-design-references/latest/MY",
-      "qa_level": "host_qa",
-      "automation_status": "high",
-      "current_state": "implemented",
-      "blockers": [],
-      "next_step": "promote release clean capture for subroutes"
-    },
-    {
-      "id": "likes",
-      "spec_status": "draft",
-      "design_reference": "manual-design-references/latest/MY",
-      "qa_level": "host_qa",
-      "automation_status": "high",
-      "current_state": "implemented",
-      "blockers": [
-        "unlock dialog and preview modal still depend on Appium review evidence"
-      ],
-      "next_step": "keep likes release capture in the design gate and extend clean coverage to unlock/preview states"
-    },
-    {
-      "id": "meeting",
-      "spec_status": "draft",
-      "design_reference": "manual-design-references/latest/meeting",
-      "qa_level": "host_qa",
-      "automation_status": "high",
-      "current_state": "implemented",
-      "blockers": [],
-      "next_step": "final spacing polish and release clean capture"
-    },
-    {
-      "id": "chat",
-      "spec_status": "draft",
-      "design_reference": "manual-design-references/latest/chat",
-      "qa_level": "host_qa",
-      "automation_status": "high",
-      "current_state": "implemented",
-      "blockers": [
-        "release clean capture is not yet the default design gate",
-        "strict design parity still depends on incomplete canonical mapping"
-      ],
-      "next_step": "promote release clean capture and strict design gate to match meeting/my"
-    },
-    {
-      "id": "automation",
-      "spec_status": "draft",
-      "design_reference": "surface-specs-plus-run-artifacts",
-      "qa_level": "state_machine",
-      "automation_status": "high",
-      "current_state": "implemented",
-      "blockers": [
-        "release clean capture is not yet the default source for every UI gate",
-        "follow-up task generation still needs stricter graduation rules"
-      ],
-      "next_step": "promote release clean capture gates and tighten spec-driven follow-up task generation"
-    },
-    {
-      "id": "lightning",
-      "spec_status": "draft",
-      "design_reference": "figma-and-legacy-map-screen",
-      "qa_level": "manual",
-      "automation_status": "low",
-      "current_state": "blocked",
-      "blockers": [
-        "Naver map client id/runtime entitlement mismatch on simulator build"
-      ],
-      "next_step": "hold until Naver map runtime is verified"
-    }
-  ]
+  "surfaces": {
+    "onboarding": { "spec_status": "stable", "qa_level": "host_qa", "automation_status": "high", "next_step": null },
+    "login": { "spec_status": "stable", "qa_level": "onboarding_appium", "automation_status": "partial", "next_step": "dedicated login host QA" },
+    "lightning": { "spec_status": "stable", "qa_level": "manual", "automation_status": "blocked", "blocked_reason": "Naver Map runtime", "next_step": "Naver Map runtime verification" },
+    "meeting": { "spec_status": "stable", "qa_level": "host_qa", "automation_status": "high", "next_step": null },
+    "chat": { "spec_status": "stable", "qa_level": "host_qa", "automation_status": "high", "next_step": null },
+    "likes": { "spec_status": "stable", "qa_level": "host_qa", "automation_status": "high", "next_step": null },
+    "my": { "spec_status": "stable", "qa_level": "host_qa", "automation_status": "high", "next_step": null },
+    "billing": { "spec_status": "stable", "qa_level": "manual", "automation_status": "none", "next_step": "implement bolt purchase flow" },
+    "moderation": { "spec_status": "stable", "qa_level": "manual", "automation_status": "none", "next_step": "implement report/discipline flow" }
+  }
 }

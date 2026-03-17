@@ -1,70 +1,99 @@
 ---
 surface: onboarding
-spec_status: draft
+spec_status: stable
 qa_level: host_qa
 automation_status: high
 ---
 
-# Onboarding Surface Contract
+# Onboarding Surface Spec
 
-## Source Order
+## 1. 스플래시
+- N초간 스플래시 노출 (디자인 확인 필요)
 
-1. User-provided onboarding reference strip from this thread
-2. Latest successful remote Appium run:
-   - `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-104826/summary.md`
-3. Current implementation targets:
-   - `/Users/user/zzirit-v2/apps/mobile/app/onboarding/profile-setup.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/components/onboarding/steps/*`
-   - `/Users/user/zzirit-v2/apps/mobile/features/onboarding/onboarding-flow.ts`
+## 2. 로그인/회원가입 화면
+- 배경 이미지 4종 랜덤 노출
+- 3개 로그인 버튼: 이메일, 카카오, 애플 ID
 
-## Canonical Flow
+### 2-a. 이메일로 시작
+- 이메일 회원가입/로그인 기능
 
-1. Nickname
-2. Intro
-3. Location permission
-4. Photo intro
-5. Photo upload
-6. Notification
-7. Basic info
-8. Matching profile
-9. Welcome
-10. Tabs
-11. MY
-12. MY edit
-13. Updated MY
-14. Settings
-15. Likes received
-16. Likes sent
+### 2-b. 카카오로 시작
+- 카카오톡 ID로 회원가입/로그인
+- 카카오톡 앱 열기 팝업 → 앱으로 진행
+- 미가입 유저: 회원가입 / 기가입 유저: 로그인
 
-## Non-Negotiable Structure
+### 2-c. 애플 아이디로 시작
+- iOS만 제공
+- OS 설정으로 이동하여 진행
+- 미가입 유저: 회원가입 / 기가입 유저: 로그인
 
-- The flow must behave like a single guided onboarding, not disconnected forms.
-- Photo upload must support library selection and crop before continuing.
-- Basic info and matching profile are separate steps.
-- Welcome transitions into the real tab shell.
+## 3. 이메일 회원가입/로그인
+- 이메일 입력창 + 안내 문구
+- 이메일 형식 검증: `abcd@efgh.ijk`
+- 오류 시: 빨간 글씨 "이메일 형식이 잘못되었어요"
+- 올바른 형식 입력 시 완료 버튼 활성화
+- 하단: 아이디/비밀번호 찾기 버튼
 
-## Data Rules
+## 4. 인증번호 입력
+- 이메일로 6자리 인증번호 발송
+- 유효 시간: 5분
+- 만료 시: "만료된 인증번호입니다. 인증번호 다시 보내기를 눌러 주세요." (시스템 얼럿)
+- 재발송 시 이전 인증번호 무효
+- 잘못된 번호: "잘못된 인증번호입니다. 다시 입력하거나 인증번호를 다시 받아주세요."
 
-- Signup goes through real proxy auth routes.
-- Uploaded photos use the real upload path.
-- Location and profile steps persist to real user/profile endpoints.
-- The flow must survive reinstall and resume cleanly in QA.
+## 5. 비밀번호 만들기 (디자인 없음)
+- 최소 8자리 이상, 영문 + 특수문자 조합
+- 오류 시: 빨간 글씨 "영문 + 특수문자 조합으로 최소 8자 이상이어야 합니다"
 
-## QA Snapshot
+## 6. 비밀번호 입력 (디자인 없음)
+- 기가입 유저에게 바로 비밀번호 입력 제공
+- 오류 시: "잘못된 비밀번호입니다. 다시 입력하거나 비밀번호 찾기를 시도해주세요."
 
-- Latest remote Appium run reaches through likes tabs:
-  `/Users/user/zzirit-v2/artifacts/appium-onboarding/20260314-104826/summary.md`
-- Photo picker and crop path are now automated.
-- Host QA for `my` depends on this flow.
+## 7. 비밀번호 찾기 (디자인 수정 필요)
+- 이메일 입력 (3번과 동일 스펙)
+- 이메일 인증번호 (4번과 동일 스펙)
+- 비밀번호 재설정 (5번과 동일 스펙)
 
-## Known Gaps
+## 8. 프로필 이름 입력
+- 플레이스홀더: "이름 입력"
+- 1자 이상 입력 시 "다음" 버튼 활성화
 
-- Release-only clean capture is still not the default for all post-onboarding states.
-- Some resumed runs still depend on recovery logic rather than one-shot clean success.
+## 9. 서비스 설명
+- 서비스 설명 화면 (관심사 기반 매칭)
+- "다음" 버튼 항상 활성화
 
-## Done Criteria
+## 10. 위치 접근 권한 허용
+- 안내 문구 + 이미지
+- "다음" 클릭 → OS 위치 접근 권한 팝업
 
-- A fresh install can reach tabs and post-onboarding MY states without manual help.
-- The screenshot chain is deterministic enough for queue-driven host QA.
-- Post-onboarding expansion screens are captured without stale-state leakage.
+## 11. 사진 접근 권한 허용
+- 안내 문구 + 이미지
+- "다음" 클릭 → OS 사진 접근 권한 팝업
 
+## 12. 프로필 사진 업로드
+- 카메라 아이콘 + 버튼
+- + 클릭 → 사진 업로드 가이드 레이어 (닫기 버튼)
+- 업로드 옵션: 사진 찍기, 라이브러리에서 선택
+- 1개 이상 업로드 시: 미리보기 + "업로드" 버튼 활성화
+
+## 13. 알림 허용
+- 안내 문구 + 이미지
+- "다음" 클릭 → OS 알림 켜기 팝업
+
+## 14. 프로필 소개 입력 (디자인 수정 필요)
+### 필수 입력
+- 성별: 남자, 여자
+- 나이: 20세~99세 드롭다운
+
+### 선택 입력
+- 직업: 직장인, 학생, 자영업, 프리랜서, 전문직
+- 키/체형: 160cm 미만 ~ 185cm 이상 / 마른 편, 슬렌더, 슬림탄탄, 보통/평균, 통통한 편, 근육질, 글래머, 아담한 편
+- MBTI: 16종
+- 주종 (복수선택): 소주, 맥주, 와인, 위스키, 막걸리, 사케, 다가능, 안마심, 가끔
+- 종교: 무교, 기독교, 불교, 천주교
+- 연애 스타일 (복수선택): 진지한, 가벼운, 친구 같은, 편안한, 뜨거운, 티키타카
+- 이상형 (복수선택): 귀여운, 청순한, 다정한, 훈훈한, 아담한, 듬직한, 섹시한, 재밌는, 유머러스한, 강아지상, 고양이상, 옷 잘입는, 요리 잘하는, 눈웃음, 근육질, 글래머, 조용한, 유쾌한
+
+## 15. 가입 완료
+- 안내 문구 + 이미지
+- "시작하기" 버튼 → 번개탭 진입

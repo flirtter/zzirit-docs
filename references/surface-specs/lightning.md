@@ -1,43 +1,81 @@
 ---
 surface: lightning
-spec_status: draft
+spec_status: stable
 qa_level: manual
-automation_status: low
+automation_status: blocked
+blocked_reason: Naver Map runtime
 ---
 
-# Lightning Surface Contract
+# Lightning (번개) Surface Spec
 
-## Source Order
+## 1. 진입 첫 화면
+- 번개탭 뒷판 + 딤드 + OS 위치 사용 허용 팝업
+- 온보딩에서 이미 허용했다면 미노출
+- 팝업 문구: "찌릿 앱이 사용자의 위치를 사용하도록 허용하겠습니까?"
+- 팝업 내 지도: 내 위치 + 반경 1km
+- 버튼: 한번 허용 / 앱 사용 중 허용 / 허용 안 함
 
-1. Existing lightning contract:
-   - `/Users/user/zzirit-v2/docs/spec/lightning-screen-contract.md`
-2. Legacy implementation baseline:
-   - `/Users/user/zzirit-rn/app/(tabs)/map.tsx`
-   - `/Users/user/zzirit-rn/components/naverMap/NaverMap.tsx`
-3. Current implementation targets:
-   - `/Users/user/zzirit-v2/apps/mobile/app/(tabs)/index.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/components/naverMap/*`
+## 2. 위치 미허용 유저
+- 번개탭 사용 불가 안내
+- "내 위치 사용 허용하기" 버튼 → OS 팝업 재노출
 
-## Current State
+## 3. 하단 탭
+- 4개: 번개, 미팅, 채팅, MY
+- MY탭: 아이콘 대신 내 프로필 사진 노출
 
-- Structure has been rebuilt toward the legacy map-first flow.
-- Native Naver map runtime is still blocked by client-id/runtime verification issues.
-- The user explicitly asked to leave lightning aside for now.
+## 4. 지도
+- 네이버 지도 API
+- 내 위치 기준 반경 10km 지도
+- 줌인/줌아웃 가능
+- 번개버블 + 미팅버블 합쳐 반경 2km 기준 최대 100개
+- 100개 초과 시: 가까운 순 랜덤, 10분마다 갱신
+- 버블 겹침 불가 (겹치면 다른 위치로 표시)
 
-## Non-Negotiable Structure
+### 4-a. 번개버블
+- 미팅버블보다 큼
+- 위치: 부정확하게 표시 (에어비앤비 참고)
+- 10분마다 갱신
+- 같은 위치 2명 이상: 겹쳐서 제공
+- 탭 → 번개 만남 레이어
 
-- Map-first surface
-- Nearby people and meetings on the same primary surface
-- Bottom sheet/list anchored under the map
-- Meaningful permission-missing fallback
+### 4-b. 미팅/소개팅 버블
+- 모집 미완료 미팅의 정확한 위치
+- 이모지 랜덤: 🍕🍻🎬☕️
+- 겹칠 때: 숫자 표시
+- 단일 탭 → 해당 게시글 / 복수 탭 → 미팅 목록
 
-## Known Blocker
+### 4-c. 내 위치
+- 위치 + 방향 표시
 
-- Naver map client/runtime mismatch prevents this from being a stable automation target.
+### 4-d. 내 위치 잡기 버튼
+- 탭 → 내 위치 중심 반경 2km 지도
 
-## Done Criteria
+## 5. 번개 만남 레이어
+- 지도에서 보이는 모든 이성 프로필 목록
+- 성별 필터: 여→남, 남→여
+- 화면 50% 레이어 → 위로 스와이프 시 전체 확장
+- 뒤 지도 영역 탭 → 레이어 닫힘
 
-- Native map renders and drags reliably.
-- Marker interactions match the intended people/meeting previews.
-- Fresh route-accurate capture is available again.
+### 목록 구성
+- 프사 1장, 이름, 나이, 직업, 거리(소수점 1자리/km)
+- 소개 키워드 최대 3개 (좌우 스크롤)
 
+### 5-a. 필터
+- 거리 순 (기본), 나이 순
+- 동점: 다른 기준으로 2차 정렬
+
+## 6. 프로필 카드
+- 목록 탭 → 지도 위에 프로필 카드 노출
+- 사진 (1:1 정방형), 이름, 나이, 직업, 거리, 키워드
+- 좋아요: 1일 20회 무료 → 초과 시 볼트 차감 팝업
+- 채팅하기: 1일 5회 무료 → 초과 시 볼트 차감 팝업
+- 더보기: 신고하기
+- 상하 스와이프로 다음 프로필
+- 카드 클릭 → 프로필 상세
+
+## 7. 프로필 상세
+- 사진, 이름, 성별, 직업, 나이, 키/체형, MBTI, 주종, 종교, 연애스타일, 이상형
+
+## 8. 매칭
+- A, B 서로 like → 채팅방 자동 생성
+- "00님과 찌릿했어요" 화면 → 채팅방 이동

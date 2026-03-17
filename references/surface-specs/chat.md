@@ -1,65 +1,54 @@
 ---
 surface: chat
-spec_status: draft
+spec_status: stable
 qa_level: host_qa
 automation_status: high
 ---
 
-# Chat Surface Contract
+# Chat (채팅) Surface Spec
 
-## Source Order
+## 1. 채팅탭
+- 1:1 채팅만 제공 (단체 채팅 추후 검토)
 
-1. Manual design bundle:
-   - `/Users/user/zzirit-v2/artifacts/manual-design-references/latest/chat`
-2. Latest raw smoke summary:
-   - `/Users/user/zzirit-v2/artifacts/manual-review/chat-raw-20260313-r9/summary.md`
-3. Current implementation targets:
-   - `/Users/user/zzirit-v2/apps/mobile/app/(tabs)/chatting.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/chattingroom.tsx`
- - `/Users/user/zzirit-v2/apps/mobile/components/chat/*`
-4. Latest host QA summary:
-   - `/Users/user/zzirit-v2/artifacts/manual-review/chat-host-qa-20260314-121447-r3/focus-host-qa-summary.md`
+### 1-1. 대화 목록
+- 참여 중인 채팅방 목록, 최근 메시지 순 정렬
+- 안 읽은 메시지: 우측 버블(개수)
 
-## Canonical Routes
+## 2. 채팅방
+- 하단 4탭 미제공
 
-- `/chatting`
-- `/chattingroom?id=<room-id>`
+### 2-a. 대화 상대 프로필
+- **메시지 없을 때**: 상단 크게 - 프사, 이름, 학교/회사, 상태메시지
+- **메시지 있을 때**: 최상단 축약 - 프사, 이름, 학교/회사
 
-## Non-Negotiable Structure
+### 2-b. 프로필 바로가기 버튼
+- 프로필 하단 → 상세 이동
 
-- List rows must convey avatar, name, preview, unread/read state, and timestamp.
-- Empty room, quick reply, image message, and location message all need distinct visual treatments.
-- The room input bar must remain usable for text and media actions.
+### 2-c. 예시 메시지 버블 (5개)
+- 안녕하세요! / 같이 노실래요? / 반가워요!👋 / 지금 뭐해요? / 친해지고 싶어요!
+- 탭 → 입력창에 입력
 
-## Data Rules
+### 2-d. + 버튼
+- 카메라: 바로 촬영
+- 사진 보내기: 앨범에서 1장 선택
+- 내 위치 보내기: 지도에서 위치 선택
 
-- Review seed must create multiple rooms with different states.
-- Last-message metadata must support read-pill and preview logic.
-- Image/location preview cards must degrade gracefully if external thumbnails fail.
+### 2-e. 메시지 입력창 + 전송 버튼
 
-## QA Snapshot
+### 2-f. 수신 메시지
+- 프사, 이름, 내용, 시간
+- 롱탭 → 신고하기
 
-- Host QA now covers:
-  - Appium chat smoke
-  - raw smoke fallback
-- Raw smoke covers:
-  - empty room
-  - quick reply
-  - location room
-  - image room
-  - gallery send attempt
-- Latest host QA summary:
-  `/Users/user/zzirit-v2/artifacts/manual-review/chat-host-qa-20260314-121447-r3/focus-host-qa-summary.md`
-- Latest raw smoke summary:
-  `/Users/user/zzirit-v2/artifacts/chat-raw/20260314-031649/summary.md`
+### 2-g. 발신 메시지
+- 내용, 시간, 읽음 표시
 
-## Known Gaps
+### 2-h. 위치 첨부 메시지
+- 위치 아이콘 + 위치명 + 밑줄
 
-- Release clean capture still needs to replace raw/dev review captures in the design gate.
-- Strict design parity is still weaker than `meeting/my` because canonical node mapping is incomplete.
+### 2-i. 사진 첨부 메시지
+- 3:4 비율 크롭
 
-## Done Criteria
-
-- Chat list and room spacing match the design bundle more closely.
-- Gallery and location flows remain deterministic enough for host QA.
-- Release capture and design gate reach the same level as `meeting/my`.
+## 3. 찌릿 매칭 채팅방
+- 서로 like → 자동 생성
+- 별도 스킨 노출
+- "⚡찌릿 매칭 성공! 이제 말 걸어도 되는 사이 😏"

@@ -1,65 +1,39 @@
 ---
 surface: login
-spec_status: draft
+spec_status: stable
 qa_level: onboarding_appium
 automation_status: partial
 ---
 
-# Login Surface Contract
-
-## Source Order
-
-1. User-provided entry/login/password-recovery reference images from this thread
-2. Current implementation targets:
-   - `/Users/user/zzirit-v2/apps/mobile/app/login/index.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/login/email.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/login/find/*`
-   - `/Users/user/zzirit-v2/apps/mobile/app/signup.tsx`
-3. Service/auth integration:
-   - Firebase-backed session bootstrap
-   - real proxy auth routes
-   - Kakao + Apple client integrations
+# Login Surface Spec
 
 ## Canonical Routes
+- `/login` - 엔트리 (4종 배경 랜덤)
+- `/login/email` - 이메일 입력
+- `/login/email/verify` - 인증번호 입력
+- `/login/email/password-create` - 비밀번호 만들기 (회원가입)
+- `/login/email/password-input` - 비밀번호 입력 (로그인)
+- `/login/find/find-account` - 비밀번호 찾기
+- `/signup` - 회원가입 플로우
 
-- `/login`
-- `/login/email`
-- `/login/find/find-account`
-- `/login/find/verify-method`
-- `/login/find/verify-identity`
-- `/signup`
+## 엔트리 화면
+- 배경 이미지 4종 랜덤
+- 버튼 3개: 이메일로 시작, 카카오로 시작, 애플 아이디로 시작
 
-## Non-Negotiable Structure
+## 이메일 플로우
+1. 이메일 입력 → 형식 검증
+2. 기가입: 비밀번호 입력 → 로그인
+3. 미가입: 인증번호(6자리, 5분) → 비밀번호 만들기 → 온보딩
 
-- Entry screen must preserve four theme variants with logo, hero image, and three CTA buttons.
-- `Email start` routes to account existence check first.
-- Unknown email continues to signup.
-- Existing email continues to email login.
-- Password recovery starts with email/id input before verification-method selection.
-- Verification methods for password recovery are `Kakao` and `Phone`.
+## 소셜 로그인
+- 카카오: 앱 열기 팝업 → 카카오톡 앱 → 가입/로그인
+- 애플: iOS only → OS 설정 → 가입/로그인
 
-## Data Rules
-
-- All login and signup mutations must target the real proxy backend.
-- Social login uses provider tokens, not mock provider ids.
-- Password recovery uses real identity verification config when available.
-- If the provider is not configured in runtime, the screen must fail clearly, not silently.
-
-## QA Snapshot
-
-- Entry variants were manually iterated and aligned.
-- Login and signup routes are covered as part of onboarding Appium flow.
-- Dedicated login host QA does not exist yet.
+## 비밀번호 찾기
+1. 이메일 입력 (3번 스펙 동일)
+2. 인증번호 (4번 스펙 동일)
+3. 비밀번호 재설정 (5번 스펙 동일)
 
 ## Known Gaps
-
-- Social login and PortOne flows still need live-account confirmation.
-- Password recovery visual flow is implemented, but provider live verification is not yet fully acceptance-tested.
-
-## Done Criteria
-
-- Entry themes stay aligned across device sizes.
-- Email branching works: existing account -> login, unknown account -> signup.
-- Password recovery follows the specified sequence without dead-end alerts.
-- Dedicated login host QA can be promoted after spec confirmation.
-
+- 소셜 로그인: live-account 검증 미완
+- PortOne 비밀번호 복구: 실 provider 미설정

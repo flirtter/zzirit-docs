@@ -1,66 +1,83 @@
 ---
 surface: my
-spec_status: draft
+spec_status: stable
 qa_level: host_qa
 automation_status: high
 ---
 
-# MY Surface Contract
+# MY Surface Spec
 
-## Source Order
+## 1. 내 프로필 영역 (MY탭 최상단)
 
-1. Manual design bundle:
-   - `/Users/user/zzirit-v2/artifacts/manual-design-references/latest/MY`
-2. Latest MY host QA:
-   - `/Users/user/zzirit-v2/artifacts/manual-review/my-host-qa-20260314-r2/focus-host-qa-summary.md`
-3. Current implementation targets:
-   - `/Users/user/zzirit-v2/apps/mobile/app/(tabs)/my.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/settings.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/account-management.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/my-edit.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/volt-charge.tsx`
-   - `/Users/user/zzirit-v2/apps/mobile/app/volt-history.tsx`
+### 1-a. 프로필 사진
+- 프로필 완성도에 따라 50~100% 단위 노출
+- 필수(이름,사진,성별,나이)만 입력: 50%
+- 선택 항목 1개=60%, 2개=70%, 3개=80%, 4개=90%, 5개+=100%
+- 선택 항목: 키체형, MBTI, 주종, 종교, 연애스타일, 이상형
 
-## Canonical Subroutes
+### 1-b~1-5. 프로필 정보
+- 이름, 나이, 직업, 회사/학교 인증, 키워드, 상태메시지
 
-- `/my`
-- `/settings`
-- `/account-management`
-- `/my-edit`
-- `/volt-charge`
-- `/volt-history`
-- `/my-location`
-- `/my-posts`
+### 1-6. 미리보기 → 내 프로필 카드
 
-## Non-Negotiable Structure
+### 1-7. 프로필 수정 → 수정 화면
 
-- MY home must expose profile summary, likes summary, location, volt, posts, and settings entry points.
-- `my-edit` must behave like an edit surface with photo management, not just a long raw form.
-- Volt history and charge are dedicated screens, not inline cards only.
+## 2. 보유 볼트
+- 0~10,000볼트, 꺽쇠 → 이용 내역
+- 충전하기 버튼 → 충전 화면
 
-## Data Rules
+## 3. Like 메뉴
+- 꺽쇠 → Like 화면
+- 내가 like 누른 썸네일 최대 10개 (최신 순, 스와이프)
+- 받은 like 리스트: 미구매자 블러, 구매자 정상 노출
 
-- MY must prefer real seeded/review data over fake placeholders.
-- If live values are missing, review seed data must still generate a design-meaningful layout.
-- Photo ordering in `my-edit` must be preserved.
+## 4. 내 위치 메뉴 → 내 위치 화면
 
-## QA Snapshot
+## 5. 작성글 메뉴 → 작성글 목록
 
-- Host QA pass:
-  `/Users/user/zzirit-v2/artifacts/manual-review/my-host-qa-20260314-r2/focus-host-qa-summary.md`
-- Representative seeded captures:
-  - `/Users/user/zzirit-v2/artifacts/manual-review/seeded-my-20260313-final/my-rebooted.png`
-  - `/Users/user/zzirit-v2/artifacts/manual-review/seeded-my-20260313-final/settings-new.png`
-  - `/Users/user/zzirit-v2/artifacts/manual-review/my-edit-20260313-refined-v2/my-edit-refined.png`
+## 6. 설정 아이콘 (우상단) → 설정 화면
 
-## Known Gaps
+## 7. 내 프로필 카드
+- 타인 프로필 카드에서 거리/라이크/찌릿 버튼 제거
+- 삼점 → 수정하기 → 수정 화면
 
-- Some subroutes still rely on seeded review routing for the cleanest captures.
-- Release capture parity for every MY subroute is not yet uniformly enforced.
+## 8. 프로필 수정
+- 사진: 갤러리에서 선택 변경
+- 이름: 14일에 1번 변경 제한 (위반 시 빨간 글씨)
+- 생년월일: 드롭다운
+- 직업, 성별, 키워드: 옵션 선택
+- 수정하기 버튼 (변경 시 활성화), 닫기 버튼
 
-## Done Criteria
+## 9. 설정
+- 알림: 토글 on/off
+- 계정 관리: 소셜 로그인 정보, 비밀번호 변경, 로그아웃, 탈퇴
+- 앱정보: 버전 노출
+- 이용약관, 운영 정책
 
-- MY home, settings, account management, edit profile, and volt screens all preserve the design hierarchy.
-- Host QA can exercise MY without stale onboarding state.
-- The latest MY bundle can be reused as a design gate input.
+## 10. 볼트 이용 내역
+- 충전/사용 배지, 시각(YYYY.MM.DD HH:MM), 내용, 볼트 수
+- 사용: 라이크 누르기, 채팅방 만들기, 받은 라이크 보기
+- 충전: 이벤트, 볼트 구매
+- 탭: 전체/충전/사용
 
+## 11. 충전 화면
+- 40볼트=4,000원 / 80=8,000 / 100=10,000 / 150=15,000 / 200=20,000 / 250=25,000
+- 선택 → 충전하기 활성화 → 앱스토어 결제
+
+## 12. Like 화면
+### 받은 Like
+- 라이크보기 구매자: 정상 노출 (이름, 나이, 직업, 썸네일 클릭→카드)
+- 미구매자: 블러/블라인드, 최대 6개, 클릭 불가
+- 하단: "내가 받은 라이크 확인하기" 버튼 → 볼트 차감 팝업
+
+### 보낸 Like
+- 정상 노출 (이름, 나이, 직업, 썸네일 클릭→카드)
+
+## 13. 내 위치 화면
+- ON/OFF 토글 (OFF→번개탭 불가 팝업, ON→위치 허용 팝업)
+- 지도에 내 위치 표시 (2depth)
+- 안내: "정확한 위치가 아닌 1km 이내 반경으로 표시"
+- 변경 버튼 → 지도에서 재설정
+
+## 14. 작성글
+- 내가 쓴 미팅 글 목록 (미팅 목록과 동일 스펙)
