@@ -1,0 +1,6 @@
+# Track image files with Git LFS (activate after: brew install git-lfs && git lfs install)
+03. Area/Design/screens/**/*.png filter=lfs diff=lfs merge=lfs -text
+03. Area/Design/flows/**/*.png filter=lfs diff=lfs merge=lfs -text
+03. Area/Design/manual/**/*.png filter=lfs diff=lfs merge=lfs -text
+02. Project/*/attachments/*.png filter=lfs diff=lfs merge=lfs -text
+02. Project/*/attachments/*.jpg filter=lfs diff=lfs merge=lfs -text

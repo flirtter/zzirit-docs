@@ -1,5 +1,36 @@
 # ZZIRIT Memory Hub
 
+ZZIRIT 프로젝트의 운영/맥락 허브. Obsidian vault + Claude Code 하네스.
+
+## Quick Start
+
+### Obsidian으로 열기
+1. Obsidian → "Open folder as vault" → 이 폴더 선택
+2. Community plugins 활성화
+3. 권장 플러그인 설치: Obsidian Git, Templater, Folder Notes, Kanban, Dataview
+
+### Claude Code로 사용
+이 폴더에서 Claude Code 실행 — CLAUDE.md가 자동 로드됨.
+
+## 구조
+
+```
+00. Inbox/          ← 미분류 자료
+01. Journal/        ← 세션 기록 (handover, workplan, QA report)
+02. Project/        ← surface별 프로젝트 (login, onboarding, my, ...)
+03. Area/           ← 영구 영역 (Design, Database, Agents, Decisions, Playbooks)
+04. Resources/      ← 참고 자료 (automation scripts)
+05. Archive/        ← 완료 프로젝트
+99. Templates/      ← 노트 템플릿
+.claude/skills/     ← Claude Code 스킬 7개
+```
+
+탐색 시작점: [Knowledge.md](Knowledge.md)
+
+---
+
+## Legacy
+
 ZZIRIT 작업의 장기 기억 저장소다.
 
 목적:
