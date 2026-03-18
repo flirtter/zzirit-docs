@@ -4,3 +4,10 @@ __pycache__/
 .pytest_cache/
 .gemini/
 gha-creds-*.json
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/
+.obsidian/themes/
+.obsidian/hotkeys.json
