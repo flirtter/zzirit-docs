@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Group 33581",
+    "surface": "onboarding",
+    "source_folder": "onboarding-page",
+    "size": "7973x3992",
+    "file_kb": 716,
+    "path": "flows/onboarding/Group 33581.png"
+  },
+  {
+    "name": "번개-3",
+    "surface": "lightning",
+    "source_folder": "lightning-page",
+    "size": "13344x3708",
+    "file_kb": 1831,
+    "path": "flows/lightning/번개-3.png"
+  },
+  {
+    "name": "Untitled",
+    "surface": "chat",
+    "source_folder": "chat-page",
+    "size": "6092x2964",
+    "file_kb": 3474,
+    "path": "flows/chat/Untitled.png"
+  }
+]

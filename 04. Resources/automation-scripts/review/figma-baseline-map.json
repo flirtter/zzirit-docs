@@ -1,0 +1,124 @@
+[
+  {
+    "screen_key": "onboarding_entry_blue",
+    "node_id": "20220:16769",
+    "label": "Onboarding Entry Blue"
+  },
+  {
+    "screen_key": "onboarding_entry_green",
+    "node_id": "20220:16787",
+    "label": "Onboarding Entry Green"
+  },
+  {
+    "screen_key": "onboarding_entry_pink",
+    "node_id": "20220:16809",
+    "label": "Onboarding Entry Pink"
+  },
+  {
+    "screen_key": "onboarding_entry_yellow",
+    "node_id": "20220:16825",
+    "label": "Onboarding Entry Yellow"
+  },
+  {
+    "screen_key": "onboarding_location_permission",
+    "node_id": "20220:16880",
+    "label": "Onboarding Location Permission"
+  },
+  {
+    "screen_key": "onboarding_profile_setup",
+    "node_id": "20220:16926",
+    "label": "Onboarding Profile Setup"
+  },
+  {
+    "screen_key": "onboarding_notification_permission",
+    "node_id": "20220:16941",
+    "label": "Onboarding Notification Permission"
+  },
+  {
+    "screen_key": "onboarding_photo_camera_permission",
+    "node_id": "20220:16959",
+    "label": "Onboarding Photo Camera Permission"
+  },
+  {
+    "screen_key": "onboarding_welcome",
+    "node_id": "20220:16981",
+    "label": "Onboarding Welcome"
+  },
+  {
+    "screen_key": "signup_email",
+    "node_id": "20220:17049",
+    "label": "Signup Email Step"
+  },
+  {
+    "screen_key": "signup_password",
+    "node_id": "20220:17075",
+    "label": "Signup Password Step"
+  },
+  {
+    "screen_key": "onboarding_photo_upload",
+    "node_id": "20220:17021",
+    "label": "Onboarding Photo Upload"
+  },
+  {
+    "screen_key": "onboarding_photo_source_sheet",
+    "node_id": "20220:17324",
+    "label": "Onboarding Photo Source Sheet"
+  },
+  {
+    "screen_key": "lightning_home",
+    "node_id": "20220:17365",
+    "label": "Lightning Home"
+  },
+  {
+    "screen_key": "meeting_list",
+    "node_id": "20220:17704",
+    "label": "Meeting List"
+  },
+  {
+    "screen_key": "my_home",
+    "node_id": "20220:18367",
+    "label": "MY Home"
+  },
+  {
+    "screen_key": "chat_list",
+    "node_id": "20220:19790",
+    "label": "Chat List"
+  },
+  {
+    "screen_key": "lightning.tab",
+    "node_id": "20220:17365",
+    "label": "/(tabs)/index"
+  },
+  {
+    "screen_key": "meeting.tab",
+    "node_id": "20220:17704",
+    "label": "/(tabs)/meeting"
+  },
+  {
+    "screen_key": "meeting.detail",
+    "node_id": "20220:18140",
+    "label": "/meeting-detail"
+  },
+  {
+    "screen_key": "my.home",
+    "node_id": "20220:18367",
+    "label": "/(tabs)/my"
+  },
+  {
+    "screen_key": "chat.list",
+    "node_id": "20220:19790",
+    "label": "/(tabs)/chatting"
+  },
+  {
+    "screen_key": "likes.received",
+    "node_id": "",
+    "label": "/likes?tab=received",
+    "figma_image_path": "/Users/user/zzirit-v2/artifacts/figma-reference/manual/likes-received.png"
+  },
+  {
+    "screen_key": "likes.sent",
+    "node_id": "",
+    "label": "/likes?tab=sent",
+    "figma_image_path": "/Users/user/zzirit-v2/artifacts/figma-reference/manual/likes-sent.png"
+  }
+]

@@ -1,0 +1,716 @@
+[
+  {
+    "screen_id": "onboarding-entry",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩.png",
+    "path": "screens/onboarding/onboarding-entry.png",
+    "size_kb": 50
+  },
+  {
+    "screen_id": "onboarding-01",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-1.png",
+    "path": "screens/onboarding/onboarding-01.png",
+    "size_kb": 49
+  },
+  {
+    "screen_id": "onboarding-02",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-2.png",
+    "path": "screens/onboarding/onboarding-02.png",
+    "size_kb": 55
+  },
+  {
+    "screen_id": "onboarding-03",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-3.png",
+    "path": "screens/onboarding/onboarding-03.png",
+    "size_kb": 55
+  },
+  {
+    "screen_id": "onboarding-04",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-4.png",
+    "path": "screens/onboarding/onboarding-04.png",
+    "size_kb": 57
+  },
+  {
+    "screen_id": "onboarding-05",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-5.png",
+    "path": "screens/onboarding/onboarding-05.png",
+    "size_kb": 64
+  },
+  {
+    "screen_id": "onboarding-06",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-6.png",
+    "path": "screens/onboarding/onboarding-06.png",
+    "size_kb": 58
+  },
+  {
+    "screen_id": "onboarding-07",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-7.png",
+    "path": "screens/onboarding/onboarding-07.png",
+    "size_kb": 55
+  },
+  {
+    "screen_id": "onboarding-08",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-8.png",
+    "path": "screens/onboarding/onboarding-08.png",
+    "size_kb": 50
+  },
+  {
+    "screen_id": "onboarding-09",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-9.png",
+    "path": "screens/onboarding/onboarding-09.png",
+    "size_kb": 60
+  },
+  {
+    "screen_id": "onboarding-10",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-10.png",
+    "path": "screens/onboarding/onboarding-10.png",
+    "size_kb": 63
+  },
+  {
+    "screen_id": "onboarding-11",
+    "surface": "onboarding",
+    "source": "Copy4/온보딩-11.png",
+    "path": "screens/onboarding/onboarding-11.png",
+    "size_kb": 512
+  },
+  {
+    "screen_id": "splash-01",
+    "surface": "onboarding",
+    "source": "Copy0/스플래시.png",
+    "path": "screens/onboarding/splash-01.png",
+    "size_kb": 41
+  },
+  {
+    "screen_id": "splash-02",
+    "surface": "onboarding",
+    "source": "Copy0/스플래시-1.png",
+    "path": "screens/onboarding/splash-02.png",
+    "size_kb": 42
+  },
+  {
+    "screen_id": "onboarding-01-2x",
+    "surface": "onboarding",
+    "source": "Copy0/온보딩-1.png",
+    "path": "screens/onboarding/onboarding-01-2x.png",
+    "size_kb": 716
+  },
+  {
+    "screen_id": "onboarding-02-2x",
+    "surface": "onboarding",
+    "source": "Copy0/온보딩-2.png",
+    "path": "screens/onboarding/onboarding-02-2x.png",
+    "size_kb": 819
+  },
+  {
+    "screen_id": "onboarding-03-2x",
+    "surface": "onboarding",
+    "source": "Copy0/온보딩-3.png",
+    "path": "screens/onboarding/onboarding-03-2x.png",
+    "size_kb": 537
+  },
+  {
+    "screen_id": "onboarding-04-2x",
+    "surface": "onboarding",
+    "source": "Copy0/온보딩-4.png",
+    "path": "screens/onboarding/onboarding-04-2x.png",
+    "size_kb": 2106
+  },
+  {
+    "screen_id": "onboarding-05-2x",
+    "surface": "onboarding",
+    "source": "Copy0/온보딩-5.png",
+    "path": "screens/onboarding/onboarding-05-2x.png",
+    "size_kb": 106
+  },
+  {
+    "screen_id": "onboarding-06-2x",
+    "surface": "onboarding",
+    "source": "Copy0/온보딩-6.png",
+    "path": "screens/onboarding/onboarding-06-2x.png",
+    "size_kb": 119
+  },
+  {
+    "screen_id": "onboarding-07-2x",
+    "surface": "onboarding",
+    "source": "Copy0/온보딩-7.png",
+    "path": "screens/onboarding/onboarding-07-2x.png",
+    "size_kb": 118
+  },
+  {
+    "screen_id": "onboarding-08-2x",
+    "surface": "onboarding",
+    "source": "Copy0/온보딩-8.png",
+    "path": "screens/onboarding/onboarding-08-2x.png",
+    "size_kb": 115
+  },
+  {
+    "screen_id": "onboarding-09-2x",
+    "surface": "onboarding",
+    "source": "Copy0/온보딩-9.png",
+    "path": "screens/onboarding/onboarding-09-2x.png",
+    "size_kb": 119
+  },
+  {
+    "screen_id": "notification-permission",
+    "surface": "onboarding",
+    "source": "Copy0/알림허용.png",
+    "path": "screens/onboarding/notification-permission.png",
+    "size_kb": 59
+  },
+  {
+    "screen_id": "notification-permission-01",
+    "surface": "onboarding",
+    "source": "Copy0/알림허용-1.png",
+    "path": "screens/onboarding/notification-permission-01.png",
+    "size_kb": 459
+  },
+  {
+    "screen_id": "notification-permission-02",
+    "surface": "onboarding",
+    "source": "Copy0/알림허용-2.png",
+    "path": "screens/onboarding/notification-permission-02.png",
+    "size_kb": 173
+  },
+  {
+    "screen_id": "notification-permission-03",
+    "surface": "onboarding",
+    "source": "Copy0/알림허용-3.png",
+    "path": "screens/onboarding/notification-permission-03.png",
+    "size_kb": 63
+  },
+  {
+    "screen_id": "notification-permission-04",
+    "surface": "onboarding",
+    "source": "Copy0/알림허용-4.png",
+    "path": "screens/onboarding/notification-permission-04.png",
+    "size_kb": 1031
+  },
+  {
+    "screen_id": "notification-permission-05",
+    "surface": "onboarding",
+    "source": "Copy0/알림허용-5.png",
+    "path": "screens/onboarding/notification-permission-05.png",
+    "size_kb": 982
+  },
+  {
+    "screen_id": "notification-permission-06",
+    "surface": "onboarding",
+    "source": "Copy0/알림허용-6.png",
+    "path": "screens/onboarding/notification-permission-06.png",
+    "size_kb": 71
+  },
+  {
+    "screen_id": "location-permission",
+    "surface": "onboarding",
+    "source": "Copy0/위치 허용.png",
+    "path": "screens/onboarding/location-permission.png",
+    "size_kb": 67
+  },
+  {
+    "screen_id": "location-permission-01",
+    "surface": "onboarding",
+    "source": "Copy0/위치 허용-1.png",
+    "path": "screens/onboarding/location-permission-01.png",
+    "size_kb": 364
+  },
+  {
+    "screen_id": "location-permission-02",
+    "surface": "onboarding",
+    "source": "Copy0/위치 허용-2.png",
+    "path": "screens/onboarding/location-permission-02.png",
+    "size_kb": 54
+  },
+  {
+    "screen_id": "lightning-map",
+    "surface": "lightning",
+    "source": "Copy1/번개.png",
+    "path": "screens/lightning/lightning-map.png",
+    "size_kb": 1611
+  },
+  {
+    "screen_id": "lightning-profile-list",
+    "surface": "lightning",
+    "source": "Copy1/번개-1.png",
+    "path": "screens/lightning/lightning-profile-list.png",
+    "size_kb": 1451
+  },
+  {
+    "screen_id": "lightning-profile-card",
+    "surface": "lightning",
+    "source": "Copy1/번개-2.png",
+    "path": "screens/lightning/lightning-profile-card.png",
+    "size_kb": 1649
+  },
+  {
+    "screen_id": "lightning-profile-detail",
+    "surface": "lightning",
+    "source": "Copy1/번개-4.png",
+    "path": "screens/lightning/lightning-profile-detail.png",
+    "size_kb": 1338
+  },
+  {
+    "screen_id": "lightning-variant",
+    "surface": "lightning",
+    "source": "Copy1/번개-5.png",
+    "path": "screens/lightning/lightning-variant.png",
+    "size_kb": 1609
+  },
+  {
+    "screen_id": "meeting-bubble-on-map",
+    "surface": "meeting",
+    "source": "Copy1/미팅.png",
+    "path": "screens/meeting/meeting-bubble-on-map.png",
+    "size_kb": 252
+  },
+  {
+    "screen_id": "meeting-bubble-detail",
+    "surface": "meeting",
+    "source": "Copy1/미팅-1.png",
+    "path": "screens/meeting/meeting-bubble-detail.png",
+    "size_kb": 238
+  },
+  {
+    "screen_id": "lightning-null",
+    "surface": "lightning",
+    "source": "Copy1/Rectangle 34625098.png",
+    "path": "screens/lightning/lightning-null.png",
+    "size_kb": 25
+  },
+  {
+    "screen_id": "moderation-warning-popup",
+    "surface": "moderation",
+    "source": "Copy1/주의 → 주의 안내 발송 → 홈 화면에 팝업으로 노출-1.png",
+    "path": "screens/moderation/moderation-warning-popup.png",
+    "size_kb": 1454
+  },
+  {
+    "screen_id": "chat-list",
+    "surface": "chat",
+    "source": "Copy2/Group 33599.png",
+    "path": "screens/chat/chat-list.png",
+    "size_kb": 406
+  },
+  {
+    "screen_id": "chat-room-empty",
+    "surface": "chat",
+    "source": "Copy2/Group 33600.png",
+    "path": "screens/chat/chat-room-empty.png",
+    "size_kb": 455
+  },
+  {
+    "screen_id": "chat-room-messages",
+    "surface": "chat",
+    "source": "Copy2/Group 33601.png",
+    "path": "screens/chat/chat-room-messages.png",
+    "size_kb": 152
+  },
+  {
+    "screen_id": "chat-room-variant-01",
+    "surface": "chat",
+    "source": "Copy2/Group 33602.png",
+    "path": "screens/chat/chat-room-variant-01.png",
+    "size_kb": 200
+  },
+  {
+    "screen_id": "chat-room-variant-02",
+    "surface": "chat",
+    "source": "Copy2/Group 33603.png",
+    "path": "screens/chat/chat-room-variant-02.png",
+    "size_kb": 364
+  },
+  {
+    "screen_id": "chat-room-photo",
+    "surface": "chat",
+    "source": "Copy2/Group 33604.png",
+    "path": "screens/chat/chat-room-photo.png",
+    "size_kb": 1566
+  },
+  {
+    "screen_id": "chat-room-location",
+    "surface": "chat",
+    "source": "Copy2/Group 33605.png",
+    "path": "screens/chat/chat-room-location.png",
+    "size_kb": 584
+  },
+  {
+    "screen_id": "chat-room-full",
+    "surface": "chat",
+    "source": "Copy2/Group 33606.png",
+    "path": "screens/chat/chat-room-full.png",
+    "size_kb": 2411
+  },
+  {
+    "screen_id": "chat-room-minimal",
+    "surface": "chat",
+    "source": "Copy2/Group 33608.png",
+    "path": "screens/chat/chat-room-minimal.png",
+    "size_kb": 111
+  },
+  {
+    "screen_id": "chat-room-match",
+    "surface": "chat",
+    "source": "Copy2/Group 33609.png",
+    "path": "screens/chat/chat-room-match.png",
+    "size_kb": 1468
+  },
+  {
+    "screen_id": "chat-room-profile",
+    "surface": "chat",
+    "source": "Copy2/Group 33610.png",
+    "path": "screens/chat/chat-room-profile.png",
+    "size_kb": 848
+  },
+  {
+    "screen_id": "chat-room-empty-state",
+    "surface": "chat",
+    "source": "Copy2/Group 33611.png",
+    "path": "screens/chat/chat-room-empty-state.png",
+    "size_kb": 61
+  },
+  {
+    "screen_id": "chat-room-keyboard",
+    "surface": "chat",
+    "source": "Copy2/Group 33613.png",
+    "path": "screens/chat/chat-room-keyboard.png",
+    "size_kb": 3033
+  },
+  {
+    "screen_id": "lightning-location-popup",
+    "surface": "lightning",
+    "source": "Copy3/Group 33582.png",
+    "path": "screens/lightning/lightning-location-popup.png",
+    "size_kb": 1854
+  },
+  {
+    "screen_id": "lightning-location-denied",
+    "surface": "lightning",
+    "source": "Copy3/Group 33583.png",
+    "path": "screens/lightning/lightning-location-denied.png",
+    "size_kb": 1365
+  },
+  {
+    "screen_id": "moderation-ban-popup",
+    "surface": "moderation",
+    "source": "Copy3/Group 33584.png",
+    "path": "screens/moderation/moderation-ban-popup.png",
+    "size_kb": 1310
+  },
+  {
+    "screen_id": "lightning-profile-card-01",
+    "surface": "lightning",
+    "source": "Copy3/Group 33585.png",
+    "path": "screens/lightning/lightning-profile-card-01.png",
+    "size_kb": 4333
+  },
+  {
+    "screen_id": "lightning-profile-card-02",
+    "surface": "lightning",
+    "source": "Copy3/Group 33586.png",
+    "path": "screens/lightning/lightning-profile-card-02.png",
+    "size_kb": 4325
+  },
+  {
+    "screen_id": "lightning-profile-detail-full",
+    "surface": "lightning",
+    "source": "Copy3/Group 33587.png",
+    "path": "screens/lightning/lightning-profile-detail-full.png",
+    "size_kb": 3673
+  },
+  {
+    "screen_id": "lightning-list-view",
+    "surface": "lightning",
+    "source": "Copy3/Group 33588.png",
+    "path": "screens/lightning/lightning-list-view.png",
+    "size_kb": 554
+  },
+  {
+    "screen_id": "lightning-list-expanded",
+    "surface": "lightning",
+    "source": "Copy3/Group 33589.png",
+    "path": "screens/lightning/lightning-list-expanded.png",
+    "size_kb": 903
+  },
+  {
+    "screen_id": "lightning-profile-card-03",
+    "surface": "lightning",
+    "source": "Copy3/Group 33590.png",
+    "path": "screens/lightning/lightning-profile-card-03.png",
+    "size_kb": 4333
+  },
+  {
+    "screen_id": "lightning-map-alt",
+    "surface": "lightning",
+    "source": "Copy3/번개.png",
+    "path": "screens/lightning/lightning-map-alt.png",
+    "size_kb": 2588
+  },
+  {
+    "screen_id": "lightning-meeting-overlay",
+    "surface": "lightning",
+    "source": "Copy3/번개-1.png",
+    "path": "screens/lightning/lightning-meeting-overlay.png",
+    "size_kb": 537
+  },
+  {
+    "screen_id": "lightning-map-bubbles",
+    "surface": "lightning",
+    "source": "Copy3/번개-2.png",
+    "path": "screens/lightning/lightning-map-bubbles.png",
+    "size_kb": 1779
+  },
+  {
+    "screen_id": "my-home",
+    "surface": "my",
+    "source": "Copy5/MY_홈.png",
+    "path": "screens/my/my-home.png",
+    "size_kb": 615
+  },
+  {
+    "screen_id": "my-home-with-like",
+    "surface": "my",
+    "source": "Copy5/MY-1.png",
+    "path": "screens/my/my-home-with-like.png",
+    "size_kb": 1000
+  },
+  {
+    "screen_id": "my-like-received-blur",
+    "surface": "likes",
+    "source": "Copy5/MY-2.png",
+    "path": "screens/likes/my-like-received-blur.png",
+    "size_kb": 1982
+  },
+  {
+    "screen_id": "my-like-received-blur-alt",
+    "surface": "likes",
+    "source": "Copy5/MY-3.png",
+    "path": "screens/likes/my-like-received-blur-alt.png",
+    "size_kb": 1872
+  },
+  {
+    "screen_id": "my-like-sent",
+    "surface": "likes",
+    "source": "Copy5/MY-4.png",
+    "path": "screens/likes/my-like-sent.png",
+    "size_kb": 1443
+  },
+  {
+    "screen_id": "my-like-received-female",
+    "surface": "likes",
+    "source": "Copy5/MY-5.png",
+    "path": "screens/likes/my-like-received-female.png",
+    "size_kb": 784
+  },
+  {
+    "screen_id": "my-like-received-female-alt",
+    "surface": "likes",
+    "source": "Copy5/MY-6.png",
+    "path": "screens/likes/my-like-received-female-alt.png",
+    "size_kb": 784
+  },
+  {
+    "screen_id": "my-profile-edit-full",
+    "surface": "my",
+    "source": "Copy5/MY-7.png",
+    "path": "screens/my/my-profile-edit-full.png",
+    "size_kb": 554
+  },
+  {
+    "screen_id": "my-profile-edit-01",
+    "surface": "my",
+    "source": "Copy5/MY-8.png",
+    "path": "screens/my/my-profile-edit-01.png",
+    "size_kb": 438
+  },
+  {
+    "screen_id": "my-profile-edit-02",
+    "surface": "my",
+    "source": "Copy5/MY-9.png",
+    "path": "screens/my/my-profile-edit-02.png",
+    "size_kb": 438
+  },
+  {
+    "screen_id": "my-profile-edit-photos",
+    "surface": "my",
+    "source": "Copy5/MY-10.png",
+    "path": "screens/my/my-profile-edit-photos.png",
+    "size_kb": 828
+  },
+  {
+    "screen_id": "my-profile-edit-photo-action",
+    "surface": "my",
+    "source": "Copy5/MY-11.png",
+    "path": "screens/my/my-profile-edit-photo-action.png",
+    "size_kb": 273
+  },
+  {
+    "screen_id": "my-camera",
+    "surface": "my",
+    "source": "Copy5/MY-12.png",
+    "path": "screens/my/my-camera.png",
+    "size_kb": 2569
+  },
+  {
+    "screen_id": "my-camera-preview",
+    "surface": "my",
+    "source": "Copy5/MY-13.png",
+    "path": "screens/my/my-camera-preview.png",
+    "size_kb": 2388
+  },
+  {
+    "screen_id": "my-photo-gallery",
+    "surface": "my",
+    "source": "Copy5/MY-14.png",
+    "path": "screens/my/my-photo-gallery.png",
+    "size_kb": 5793
+  },
+  {
+    "screen_id": "my-placeholder",
+    "surface": "my",
+    "source": "Copy5/MY-15.png",
+    "path": "screens/my/my-placeholder.png",
+    "size_kb": 37
+  },
+  {
+    "screen_id": "my-settings",
+    "surface": "my",
+    "source": "Copy5/MY-16.png",
+    "path": "screens/my/my-settings.png",
+    "size_kb": 62
+  },
+  {
+    "screen_id": "my-settings-wip",
+    "surface": "my",
+    "source": "Copy5/MY-17.png",
+    "path": "screens/my/my-settings-wip.png",
+    "size_kb": 68
+  },
+  {
+    "screen_id": "my-account-manage",
+    "surface": "my",
+    "source": "Copy5/MY-18.png",
+    "path": "screens/my/my-account-manage.png",
+    "size_kb": 49
+  },
+  {
+    "screen_id": "my-app-info",
+    "surface": "my",
+    "source": "Copy5/MY-19.png",
+    "path": "screens/my/my-app-info.png",
+    "size_kb": 40
+  },
+  {
+    "screen_id": "my-terms",
+    "surface": "my",
+    "source": "Copy5/MY-20.png",
+    "path": "screens/my/my-terms.png",
+    "size_kb": 41
+  },
+  {
+    "screen_id": "my-policy",
+    "surface": "my",
+    "source": "Copy5/MY-21.png",
+    "path": "screens/my/my-policy.png",
+    "size_kb": 42
+  },
+  {
+    "screen_id": "bolt-charge",
+    "surface": "billing",
+    "source": "Copy5/MY_볼트 충전하기.png",
+    "path": "screens/billing/bolt-charge.png",
+    "size_kb": 300
+  },
+  {
+    "screen_id": "bolt-charge-alt",
+    "surface": "billing",
+    "source": "Copy5/MY_볼트 충전하기-1.png",
+    "path": "screens/billing/bolt-charge-alt.png",
+    "size_kb": 301
+  },
+  {
+    "screen_id": "bolt-history",
+    "surface": "billing",
+    "source": "Copy5/MY_볼트 이용내역.png",
+    "path": "screens/billing/bolt-history.png",
+    "size_kb": 102
+  },
+  {
+    "screen_id": "bolt-history-charge",
+    "surface": "billing",
+    "source": "Copy5/MY_볼트 이용내역-1.png",
+    "path": "screens/billing/bolt-history-charge.png",
+    "size_kb": 59
+  },
+  {
+    "screen_id": "bolt-history-usage",
+    "surface": "billing",
+    "source": "Copy5/MY_볼트 이용내역-2.png",
+    "path": "screens/billing/bolt-history-usage.png",
+    "size_kb": 88
+  },
+  {
+    "screen_id": "meeting-list",
+    "surface": "meeting",
+    "source": "Copy6/Group 33591.png",
+    "path": "screens/meeting/meeting-list.png",
+    "size_kb": 238
+  },
+  {
+    "screen_id": "meeting-list-filtered",
+    "surface": "meeting",
+    "source": "Copy6/Group 33592.png",
+    "path": "screens/meeting/meeting-list-filtered.png",
+    "size_kb": 256
+  },
+  {
+    "screen_id": "meeting-detail",
+    "surface": "meeting",
+    "source": "Copy6/Group 33593.png",
+    "path": "screens/meeting/meeting-detail.png",
+    "size_kb": 1538
+  },
+  {
+    "screen_id": "meeting-detail-closed",
+    "surface": "meeting",
+    "source": "Copy6/Group 33594.png",
+    "path": "screens/meeting/meeting-detail-closed.png",
+    "size_kb": 92
+  },
+  {
+    "screen_id": "meeting-create",
+    "surface": "meeting",
+    "source": "Copy6/Group 33595.png",
+    "path": "screens/meeting/meeting-create.png",
+    "size_kb": 198
+  },
+  {
+    "screen_id": "meeting-create-full",
+    "surface": "meeting",
+    "source": "Copy6/Group 33596.png",
+    "path": "screens/meeting/meeting-create-full.png",
+    "size_kb": 273
+  },
+  {
+    "screen_id": "meeting-create-full-alt",
+    "surface": "meeting",
+    "source": "Copy6/Group 33597.png",
+    "path": "screens/meeting/meeting-create-full-alt.png",
+    "size_kb": 273
+  },
+  {
+    "screen_id": "meeting-detail-with-chat",
+    "surface": "meeting",
+    "source": "Copy6/Group 33598.png",
+    "path": "screens/meeting/meeting-detail-with-chat.png",
+    "size_kb": 1575
+  }
+]

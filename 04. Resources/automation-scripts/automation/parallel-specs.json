@@ -1,0 +1,107 @@
+{
+  "workers": [
+    {
+      "key": "gemini-review",
+      "enabled": true,
+      "runner": "gemini-review",
+      "priority": 100,
+      "cooldown_seconds": 900,
+      "branch": "feat/qa-foundation",
+      "worktree": "/Users/user/zzirit-v2",
+      "review_root": "/Users/user/zzirit-v2",
+      "focus": "Review the active Codex batch and surface product, UI parity, API, and QA issues",
+      "screen_keys": [
+        "onboarding_entry_blue",
+        "onboarding_profile_setup",
+        "lightning_home",
+        "meeting_list",
+        "my_home",
+        "chat_list"
+      ],
+      "summary": "Use Gemini as an advisory QA reviewer that leaves markdown notes after the active Codex implementation lane finishes."
+    },
+    {
+      "key": "gemini-backlog",
+      "enabled": false,
+      "runner": "gemini-coder",
+      "priority": 50,
+      "cooldown_seconds": 1800,
+      "branch": "automation/gemini-backlog",
+      "worktree": "/Users/user/zzirit-v2-worktrees/gemini-backlog",
+      "review_root": "/Users/user/zzirit-v2-worktrees/gemini-backlog",
+      "focus": "Backlog breadth lane that advances a non-active section to about 85% while Codex handles the main focus",
+      "screen_keys": [
+        "onboarding_entry_blue",
+        "onboarding_profile_setup",
+        "lightning_home",
+        "meeting_list",
+        "my_home",
+        "chat_list"
+      ],
+      "summary": "Use Gemini to advance a different section than the active Codex focus, then leave a clean branch for Codex to revisit later."
+    },
+    {
+      "key": "ui-login",
+      "enabled": false,
+      "branch": "automation/ui-login",
+      "worktree": "/Users/user/zzirit-v2-worktrees/ui-login",
+      "focus": "Unauthenticated entry and login Figma parity",
+      "screen_keys": [
+        "onboarding_entry_blue",
+        "onboarding_entry_green",
+        "onboarding_entry_pink",
+        "onboarding_entry_yellow"
+      ],
+      "summary": "Make the login entry screen match the Figma variants and keep capture artifacts fresh."
+    },
+    {
+      "key": "ui-onboarding",
+      "enabled": false,
+      "branch": "automation/ui-onboarding",
+      "worktree": "/Users/user/zzirit-v2-worktrees/ui-onboarding",
+      "focus": "Onboarding step-by-step parity",
+      "screen_keys": [
+        "signup_email",
+        "signup_password",
+        "onboarding_location_permission",
+        "onboarding_profile_setup",
+        "onboarding_notification_permission",
+        "onboarding_welcome"
+      ],
+      "summary": "Split onboarding back to the Figma step structure and verify each step against cached or Playwright-captured references."
+    },
+    {
+      "key": "ui-lightning",
+      "enabled": false,
+      "branch": "automation/ui-lightning",
+      "worktree": "/Users/user/zzirit-v2-worktrees/ui-lightning",
+      "focus": "Lightning tab visual parity",
+      "screen_keys": [
+        "lightning_home"
+      ],
+      "summary": "Bring the lightning home flow closer to the Figma baseline and keep route-level screenshots current."
+    },
+    {
+      "key": "ui-meeting-my",
+      "enabled": false,
+      "branch": "automation/ui-meeting-my",
+      "worktree": "/Users/user/zzirit-v2-worktrees/ui-meeting-my",
+      "focus": "Meeting, chat, and MY parity",
+      "screen_keys": [
+        "meeting_list",
+        "my_home",
+        "chat_list"
+      ],
+      "summary": "Advance meeting, chat, and MY surfaces together so visible app breadth keeps moving."
+    },
+    {
+      "key": "server-integration",
+      "enabled": false,
+      "branch": "automation/server-integration",
+      "worktree": "/Users/user/zzirit-v2-worktrees/server-integration",
+      "focus": "Server/API integration and real-path QA",
+      "screen_keys": [],
+      "summary": "Continue server and integration batches in smaller increments so backend progress stays balanced with UI work."
+    }
+  ]
+}
