@@ -26,6 +26,16 @@ Claude Code에서 팀 모드로 실행:
 orchestrator.md를 읽고 팀모드로 다음 작업을 진행해줘: [작업 설명]
 ```
 
+## 에이전트 상세
+- [[orchestrator/IDENTITY|orchestrator 정의]]
+- [[api/IDENTITY|api-dev 정의]] / [[api/KNOWLEDGE|api-dev 지식]]
+- [[ios/IDENTITY|ios-qa 정의]] / [[ios/KNOWLEDGE|ios-qa 지식]] / [[ios/SOP|ios-qa SOP]] / [[ios/SCRATCHPAD|ios-qa 작업노트]]
+- [[design/IDENTITY|design-review 정의]] / [[design/KNOWLEDGE|design-review 지식]]
+- [[qa/IDENTITY|qa-automation 정의]] / [[qa/KNOWLEDGE|qa-automation 지식]]
+- [[planning/IDENTITY|planning 정의]]
+
+> **참고**: 루트의 `agents/` 디렉터리는 레거시이며, `03. Area/Agents/`가 정식(canonical) 위치입니다.
+
 ## Codex/Gemini 연동
 
 - **Codex**: `scripts/review/codex-start.sh`로 코드 수정 에이전트 실행

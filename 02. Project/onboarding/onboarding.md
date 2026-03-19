@@ -62,6 +62,9 @@ automation_status: high
 - Release-only clean capture is still not the default for all post-onboarding states.
 - Some resumed runs still depend on recovery logic rather than one-shot clean success.
 
+## QA
+- [[QA/QA|QA 현황]]
+
 ## Done Criteria
 
 - A fresh install can reach tabs and post-onboarding MY states without manual help.

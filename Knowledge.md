@@ -28,7 +28,8 @@ ZZIRIT 프로젝트의 최상위 MOC(Map of Content).
 - [[03. Area/Design/DESIGN-MAP]] — 디자인 맵
 - [[03. Area/Database/Database]] — DB 스키마
 - [[03. Area/Agents/README]] — 에이전트 정의
-- [[03. Area/Playbooks/github-projects]] — 운영 플레이북
+- [[03. Area/Playbooks/github-projects|GitHub Projects 운영]]
+- [[03. Area/Playbooks/cross-model-protocol|멀티모델 프로토콜]]
 - [[03. Area/Decisions/Decisions]] — 의사결정 기록
 
 ## 참고 자료
@@ -42,10 +43,19 @@ ZZIRIT 프로젝트의 최상위 MOC(Map of Content).
 - [[references/qa-workflow]] — QA 워크플로 결정
 - [[references/qa-templates]] — QA 양식
 - [[references/tc-generation-rules]] — TC 생성 규칙
+- [[docs/superpowers/specs/2026-03-18-vault-restructure-design|Vault 구조 설계]]
+
+## 템플릿
+
+- [[99. Templates/Decision Record|결정 기록]]
+- [[99. Templates/Handover|핸드오버]]
+- [[99. Templates/QA Issue|QA 이슈]]
+- [[99. Templates/QA Report|QA 보고서]]
+- [[99. Templates/Surface Project|Surface 프로젝트]]
 
 ## 핸드오버
 
-- [[01. Journal/handovers/HANDOVER_20260320_s5]] — 최근 핸드오버 (세션5)
+- [[01. Journal/01. Journal|세션 저널]]
 
 ## 시스템 문서
 

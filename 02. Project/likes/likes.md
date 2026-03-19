@@ -62,6 +62,9 @@ automation_status: high
 - Release capture는 아직 상위 3탭만 커버
 - Unlock dialog, preview modal은 Appium review 기반 (release-only capture 아님)
 
+## QA
+- [[QA/QA|QA 현황]]
+
 ## Done Criteria
 
 - Received, sent, and ZZIRIT tabs all render with real seeded data.

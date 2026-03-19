@@ -35,6 +35,9 @@ automation_status: low
 
 - Naver map client/runtime mismatch prevents this from being a stable automation target.
 
+## QA
+- [[QA/QA|QA 현황]]
+
 ## Done Criteria
 
 - Native map renders and drags reliably.

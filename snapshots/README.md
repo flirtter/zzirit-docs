@@ -11,4 +11,15 @@
 ## 기타
 - [[automation-state]] — 자동화 큐 상태
 - [[issue-backlog]] — 이슈 백로그
-- [[repositories]] — 활성 레포 상태
+- [[issue-backlog-detailed]] — 상세 이슈 백로그
+- [[repositories]] — 레포 상태
+- [[git/zzirit-v2-commits]] — zzirit-v2 커밋 이력
+- [[git/zzirit-proxy-commits]] — zzirit-proxy 커밋 이력
+
+## 아카이브
+- [[HANDOVER_20260317]] — 3/17 핸드오버 스냅샷
+- [[QA_20260318]] — 3/18 QA
+- [[WORKPLAN_20260318]] — 3/18 작업계획
+
+## 자동화 실행 기록
+- automation-run-notes/ 하위 파일들 (날짜별 실행 로그)

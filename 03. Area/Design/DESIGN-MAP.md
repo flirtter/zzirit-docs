@@ -3,6 +3,9 @@
 개별 화면 이미지와 서비스 플로우 이미지의 매핑.
 에이전트(design-review, qa-automation)가 구현 참조 시 이 문서를 기준으로 사용.
 
+## 수동 디자인 참조
+- [[manual/catalog|수동 디자인 카탈로그]]
+
 ## 사용법
 
 - **개별 화면 구현**: `screens/{surface}/{screen-id}.png` 참조

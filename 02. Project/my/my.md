@@ -75,6 +75,9 @@ automation_status: high
 - 사진 크롭 UI 미구현 — Figma "취소"/"완료" 스타일 커스텀 크롭 pending
 - 칩 컴포넌트 공유 모듈 추출 필요 (my-edit <-> onboarding 간 중복 코드)
 
+## QA
+- [[QA/QA|QA 현황]]
+
 ## Done Criteria
 
 - MY home, settings, account management, edit profile, and volt screens all preserve the design hierarchy.

@@ -56,6 +56,9 @@ automation_status: partial
 - Social login and PortOne flows still need live-account confirmation.
 - Password recovery visual flow is implemented, but provider live verification is not yet fully acceptance-tested.
 
+## QA
+- [[QA/QA|QA 현황]]
+
 ## Done Criteria
 
 - Entry themes stay aligned across device sizes.

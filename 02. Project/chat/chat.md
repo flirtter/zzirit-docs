@@ -68,6 +68,9 @@ design_parity: matched
 - 커스텀 사진 크롭 UI (Figma "취소"/"완료" 스타일) 미구현 — 현재 iOS 기본 크롭 제거 후 원본 사용
 - StaticMapPreview → 서버 프록시 기반 Static Map 이미지 전환 필요
 
+## QA
+- [[QA/QA|QA 현황]]
+
 ## Done Criteria (2026-03-20 갱신)
 
 - ✅ 첨부 메뉴 세로 리스트 (Figma 매칭)

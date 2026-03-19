@@ -52,6 +52,9 @@ automation_status: high
 - Spacing and form density can still be tightened further against the design.
 - Release-only clean capture path is not yet the sole source of truth.
 
+## QA
+- [[QA/QA|QA 현황]]
+
 ## Done Criteria
 
 - List, create, and detail all pass their dedicated Appium review.
