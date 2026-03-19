@@ -54,14 +54,21 @@ design_parity: matched
 - Latest raw smoke summary:
   `/Users/user/zzirit-v2/artifacts/chat-raw/20260314-031649/summary.md`
 
+## 2026-03-20 변경사항
+
+- ✅ 위치 프리뷰 수정: NaverMapView 인라인 프리뷰 + 캐싱 최적화 (StaticMapPreview 기반)
+- ✅ Unknown User 해결: Firestore 프로필 조회로 상대방 이름 표시
+- ✅ 메시지 정렬 수정: 본인 메시지 우측 정렬 올바르게 동작
+
 ## Known Gaps
 
 - ~~Release clean capture still needs to replace raw/dev review captures in the design gate.~~ → Resolved (dae9204)
 - ~~Strict design parity is still weaker than `meeting/my`.~~ → Resolved: 6건 디자인 파리티 수정 (dae9204)
-- 채팅방 "Unknown User" → 상대방 이름 표시 필요
+- ~~채팅방 "Unknown User" → 상대방 이름 표시 필요~~ → Resolved (2026-03-20): Firestore 프로필 조회
 - 커스텀 사진 크롭 UI (Figma "취소"/"완료" 스타일) 미구현 — 현재 iOS 기본 크롭 제거 후 원본 사용
+- StaticMapPreview → 서버 프록시 기반 Static Map 이미지 전환 필요
 
-## Done Criteria (2026-03-19 갱신)
+## Done Criteria (2026-03-20 갱신)
 
 - ✅ 첨부 메뉴 세로 리스트 (Figma 매칭)
 - ✅ 위치 전송 location_picker 연동
@@ -70,5 +77,7 @@ design_parity: matched
 - ✅ 전송 버튼 초록 활성화
 - ✅ 카메라 에러 처리
 - ✅ 통합 이미지 서비스 (3:4 + 1:1 이중 저장)
-- [ ] Unknown User 이름 표시
+- ✅ Unknown User → Firestore 프로필 조회 (2026-03-20)
+- ✅ 위치 프리뷰 NaverMapView 인라인 + 캐싱 (2026-03-20)
+- ✅ 메시지 우측 정렬 수정 (2026-03-20)
 - [ ] 커스텀 크롭 UI

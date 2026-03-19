@@ -1,6 +1,6 @@
 ---
 surface: my
-spec_status: draft
+spec_status: stable
 qa_level: host_qa
 automation_status: high
 ---
@@ -38,6 +38,22 @@ automation_status: high
 - `my-edit` must behave like an edit surface with photo management, not just a long raw form.
 - Volt history and charge are dedicated screens, not inline cards only.
 
+## Profile Edit 15 Fields (2026-03-20 재구성)
+
+`my-edit` 화면은 다음 15개 필드를 편집 가능하게 제공:
+- 닉네임, 생년월일, 성별
+- 직업, 학력
+- 키, 체형
+- 음주, 흡연
+- MBTI, 종교
+- 관심사 (다중 선택 칩)
+- 자기소개
+- 사진 관리 (최대 6장, 드래그 재정렬)
+- 사진 선택 확인 모달 (photo confirm modal)
+
+각 필드는 Figma MY.png 디자인에 매칭된 레이아웃으로 구성.
+칩 기반 선택 UI는 onboarding과 동일 패턴 사용.
+
 ## Data Rules
 
 - MY must prefer real seeded/review data over fake placeholders.
@@ -55,12 +71,14 @@ automation_status: high
 
 ## Known Gaps
 
-- Some subroutes still rely on seeded review routing for the cleanest captures.
-- Release capture parity for every MY subroute is not yet uniformly enforced.
+- 커스텀 카메라 UI (Figma MY.png 기준) 미구현 — 현재 expo-image-picker 기본 UI 사용
+- 사진 크롭 UI 미구현 — Figma "취소"/"완료" 스타일 커스텀 크롭 pending
+- 칩 컴포넌트 공유 모듈 추출 필요 (my-edit <-> onboarding 간 중복 코드)
 
 ## Done Criteria
 
 - MY home, settings, account management, edit profile, and volt screens all preserve the design hierarchy.
 - Host QA can exercise MY without stale onboarding state.
 - The latest MY bundle can be reused as a design gate input.
-
+- ✅ 프로필 편집 15필드 전면 재구성 완료 (2026-03-20)
+- ✅ 사진 선택 확인 모달 추가 (2026-03-20)
