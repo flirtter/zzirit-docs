@@ -1,5 +1,5 @@
 ---
-name: qa-dashboard
+name: zzirit-qa-dashboard
 description: >
   전체 surface의 QA 현황을 집계하는 스킬.
   트리거: "QA 현황", "qa dashboard", "QA 대시보드"

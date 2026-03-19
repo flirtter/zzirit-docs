@@ -1,5 +1,5 @@
 ---
-name: refresh
+name: zzirit-refresh
 description: >
   프로젝트 상태 스냅샷을 갱신하는 스킬.
   트리거: "상태 갱신해줘", "refresh", "스냅샷 갱신"

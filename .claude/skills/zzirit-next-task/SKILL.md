@@ -1,5 +1,5 @@
 ---
-name: next-task
+name: zzirit-next-task
 description: >
   다음 작업을 추천하는 스킬. backlog, surface status, 블로커를 분석.
   트리거: "다음 뭐해?", "next task", "다음 작업 추천"

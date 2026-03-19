@@ -1,5 +1,5 @@
 ---
-name: qa-review
+name: zzirit-qa-review
 description: >
   특정 surface의 open QA 이슈를 리뷰하고 이미지 비교 분석하는 스킬.
   트리거: "QA 리뷰해줘 {surface}", "qa review {surface}"

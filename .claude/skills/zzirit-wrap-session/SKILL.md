@@ -1,5 +1,5 @@
 ---
-name: wrap-session
+name: zzirit-wrap-session
 description: >
   세션 종료 시 handover 문서를 자동 생성하는 스킬.
   트리거: "세션 마무리해줘", "wrap session", "핸드오버 생성"

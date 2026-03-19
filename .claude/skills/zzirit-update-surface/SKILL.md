@@ -1,5 +1,5 @@
 ---
-name: update-surface
+name: zzirit-update-surface
 description: >
   surface의 상태를 갱신하는 스킬. spec, surface-status, 칸반을 동시 업데이트.
   트리거: "{surface} 상태 업데이트", "update surface {surface}"

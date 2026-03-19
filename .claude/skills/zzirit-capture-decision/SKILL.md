@@ -1,5 +1,5 @@
 ---
-name: capture-decision
+name: zzirit-capture-decision
 description: >
   팀 의사결정을 ADR 형식으로 기록하는 스킬.
   트리거: "결정 기록해줘", "ADR 생성", "capture decision"
