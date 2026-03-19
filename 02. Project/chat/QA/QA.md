@@ -8,7 +8,7 @@ chat surface의 QA 이슈 대시보드.
 
 ## Open Issues
 
-- [[chat-qa-20260319]] — 6건 (첨부메뉴 UI, 카메라에러, 위치연동, 지도프리뷰, Apple Maps, 헤더텍스트) — fixing
+- [[chat-qa-20260319]] — 6건 (첨부메뉴 UI, 카메라에러, 위치연동, 지도프리뷰, Apple Maps, 헤더텍스트) — ✅ resolved (dae9204)
 
 ## 이슈 등록 방법
 

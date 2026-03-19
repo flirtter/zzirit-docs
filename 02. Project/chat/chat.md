@@ -1,8 +1,9 @@
 ---
 surface: chat
-spec_status: draft
+spec_status: stable
 qa_level: host_qa
 automation_status: high
+design_parity: matched
 ---
 
 # Chat Surface Contract
@@ -55,11 +56,19 @@ automation_status: high
 
 ## Known Gaps
 
-- Release clean capture still needs to replace raw/dev review captures in the design gate.
-- Strict design parity is still weaker than `meeting/my` because canonical node mapping is incomplete.
+- ~~Release clean capture still needs to replace raw/dev review captures in the design gate.~~ → Resolved (dae9204)
+- ~~Strict design parity is still weaker than `meeting/my`.~~ → Resolved: 6건 디자인 파리티 수정 (dae9204)
+- 채팅방 "Unknown User" → 상대방 이름 표시 필요
+- 커스텀 사진 크롭 UI (Figma "취소"/"완료" 스타일) 미구현 — 현재 iOS 기본 크롭 제거 후 원본 사용
 
-## Done Criteria
+## Done Criteria (2026-03-19 갱신)
 
-- Chat list and room spacing match the design bundle more closely.
-- Gallery and location flows remain deterministic enough for host QA.
-- Release capture and design gate reach the same level as `meeting/my`.
+- ✅ 첨부 메뉴 세로 리스트 (Figma 매칭)
+- ✅ 위치 전송 location_picker 연동
+- ✅ 위치 메시지 Naver Static Map 프리뷰
+- ✅ 위치 확인 in-app NaverMapView
+- ✅ 전송 버튼 초록 활성화
+- ✅ 카메라 에러 처리
+- ✅ 통합 이미지 서비스 (3:4 + 1:1 이중 저장)
+- [ ] Unknown User 이름 표시
+- [ ] 커스텀 크롭 UI
