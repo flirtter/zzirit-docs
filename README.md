@@ -39,7 +39,7 @@ ZZIRIT 작업의 장기 기억 저장소다.
 - 이후 유지보수/QA/리팩토링 시 이 레포를 기준 문맥으로 사용
 
 현재 원격:
-- `https://github.com/ahg0223/zzirit-memory-hub`
+- `https://github.com/ahg0223/zzirit-docs`
 
 구성:
 - `snapshots/`: 현재 로컬/원격 상태에서 생성한 스냅샷
@@ -66,7 +66,7 @@ ZZIRIT 작업의 장기 기억 저장소다.
 - 최신 batch 맥락은 `snapshots/automation-run-notes/` 의 가장 최근 note를 우선 참고한다.
 
 현재 GitHub 운영:
-- 레포 이름: `zzirit-memory-hub`
+- 레포 이름: `zzirit-docs`
 - 공개 여부: `private`
 - Gemini GitHub Actions:
   - `Gemini PR Review`
@@ -113,7 +113,7 @@ GitHub Projects 운영:
 
 갱신:
 ```bash
-cd /Users/user/zzirit-memory-hub
+cd /Users/user/zzirit-docs
 python3 scripts/sync_context_assets.py
 python3 scripts/refresh_snapshot.py
 python3 scripts/export_project_seed.py

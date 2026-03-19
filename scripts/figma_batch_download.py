@@ -15,7 +15,7 @@ from pathlib import Path
 API_KEY = os.environ.get("FIGMA_API_KEY", "")
 DESIGN_FILE_KEY = "0KbCmyCo7m487adolGS3lW"
 PLANNING_FILE_KEY = "VyUM039bpvrwupsXkNNCwW"
-OUTPUT_DIR = Path(os.environ.get("OUTPUT_DIR", os.path.expanduser("~/zzirit-memory-hub/references/figma-exports")))
+OUTPUT_DIR = Path(os.environ.get("OUTPUT_DIR", os.path.expanduser("~/zzirit-docs/references/figma-exports")))
 BATCH_SIZE = 15  # nodes per API call
 DELAY_BETWEEN_BATCHES = 3  # seconds
 

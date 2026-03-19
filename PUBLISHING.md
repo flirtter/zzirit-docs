@@ -2,7 +2,7 @@
 
 현재 상태:
 - GitHub private repo 생성 완료
-- 원격: `https://github.com/ahg0223/zzirit-memory-hub`
+- 원격: `https://github.com/ahg0223/zzirit-docs`
 - 로컬 `main` -> `origin/main` 푸시 완료
 - 스냅샷 갱신 후 바로 추가 커밋/푸시 가능
 
@@ -10,7 +10,7 @@
 
 1. 로컬 스냅샷 갱신
 ```bash
-cd /Users/user/zzirit-memory-hub
+cd /Users/user/zzirit-docs
 python3 scripts/sync_context_assets.py
 python3 scripts/refresh_snapshot.py
 python3 scripts/export_project_seed.py
@@ -24,20 +24,20 @@ python3 scripts/sync_github_project.py
 
 2. 변경 확인
 ```bash
-cd /Users/user/zzirit-memory-hub
+cd /Users/user/zzirit-docs
 git status
 ```
 
 3. 커밋
 ```bash
-cd /Users/user/zzirit-memory-hub
+cd /Users/user/zzirit-docs
 git add .
 git commit -m "docs: refresh memory hub snapshot"
 ```
 
 4. 푸시
 ```bash
-cd /Users/user/zzirit-memory-hub
+cd /Users/user/zzirit-docs
 git push
 ```
 

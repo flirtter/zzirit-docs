@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 
-MEMORY_ROOT = Path("/Users/user/zzirit-memory-hub")
+MEMORY_ROOT = Path("/Users/user/zzirit-docs")
 SNAPSHOT_ROOT = MEMORY_ROOT / "snapshots"
 AUTOMATION_NOTE_ROOT = SNAPSHOT_ROOT / "automation-run-notes"
 ZZIRIT_V2_ROOT = Path("/Users/user/zzirit-v2")
@@ -147,7 +147,7 @@ def latest_remote_automation_note_paths(limit: int = 5) -> list[str]:
     code = (
         "from pathlib import Path; "
         "root=Path('/Users/user/zzirit-v2/artifacts/automation/runs'); "
-        "notes=sorted([p/'memory-hub-note.md' for p in root.iterdir() if p.is_dir() and (p/'memory-hub-note.md').exists()]); "
+        "notes=sorted([p/'zzirit-docs-note.md' for p in root.iterdir() if p.is_dir() and (p/'zzirit-docs-note.md').exists()]); "
         f"print('\\n'.join(str(p) for p in notes[-{limit}:]))"
     )
     result = run_remote_python(code, timeout=20)

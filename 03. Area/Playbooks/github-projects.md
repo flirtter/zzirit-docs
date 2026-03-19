@@ -1,6 +1,6 @@
 # GitHub Projects Playbook
 
-`zzirit-memory-hub`의 GitHub Projects는 작업 현황판이다. 구현 저장소가 아니라 운영 저장소인 만큼, 이슈는 맥락과 작업 단위를 담고 Projects는 현재 상태를 한눈에 보여주는 역할을 맡는다.
+`zzirit-docs`의 GitHub Projects는 작업 현황판이다. 구현 저장소가 아니라 운영 저장소인 만큼, 이슈는 맥락과 작업 단위를 담고 Projects는 현재 상태를 한눈에 보여주는 역할을 맡는다.
 
 ## 목적
 
@@ -12,7 +12,7 @@
 ## 권장 프로젝트
 
 - 이름: `ZZIRIT Delivery`
-- 소스: `zzirit-memory-hub` 이슈
+- 소스: `zzirit-docs` 이슈
 - owner: `ahg0223`
 - 현재 생성된 프로젝트:
   - `https://github.com/users/ahg0223/projects/1`
@@ -91,7 +91,7 @@
   - `snapshots/current-state.json`
   - `references/surface-specs/*`
 - 구현/QA는 `zzirit-v2`와 Mac Studio에서 수행
-- 결과 요약은 `zzirit-memory-hub`에 남김
+- 결과 요약은 `zzirit-docs`에 남김
 
 ## 자동화 연결 방향
 

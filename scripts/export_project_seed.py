@@ -7,7 +7,7 @@ import subprocess
 from pathlib import Path
 
 
-REPO = "ahg0223/zzirit-memory-hub"
+REPO = "ahg0223/zzirit-docs"
 ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "snapshots" / "project-board-seed.json"
 OUT_CSV = ROOT / "snapshots" / "project-board-seed.csv"

@@ -14,7 +14,7 @@ AGENT_STATE_FILE="$ARTIFACT_DIR/agent-state.json"
 NEXT_ACTION_FILE="$ARTIFACT_DIR/next-action.md"
 AGENT_STATE_SCRIPT="$ROOT/scripts/automation/update-agent-state.py"
 DESIGN_RESULT_SCRIPT="$ROOT/scripts/automation/write-design-result.py"
-MEMORY_HUB_NOTE_SCRIPT="$ROOT/scripts/automation/write-memory-hub-note.py"
+MEMORY_HUB_NOTE_SCRIPT="$ROOT/scripts/automation/write-zzirit-docs-note.py"
 HOST_QA_SCRIPT="${ZZIRIT_AUTOMATION_HOST_QA_SCRIPT:-$ROOT/scripts/automation/run-focus-host-qa.sh}"
 BUNDLE_CONTEXT_SCRIPT="${ZZIRIT_AUTOMATION_FIGMA_BUNDLE_SCRIPT:-$ROOT/scripts/automation/prepare-figma-bundle-context.sh}"
 STATUS_FILE="$ARTIFACT_DIR/status.md"
@@ -594,8 +594,8 @@ append_design_result_note() {
 }
 
 write_memory_hub_note_if_needed() {
-  memory_hub_note_path="$run_dir/memory-hub-note.md"
-  memory_hub_note_json_path="$run_dir/memory-hub-note.json"
+  memory_hub_note_path="$run_dir/zzirit-docs-note.md"
+  memory_hub_note_json_path="$run_dir/zzirit-docs-note.json"
 
   if [ ! -f "$MEMORY_HUB_NOTE_SCRIPT" ]; then
     return 0

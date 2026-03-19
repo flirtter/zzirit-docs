@@ -85,7 +85,7 @@
 - `references/automation-scripts/automation/update-agent-state.py`
 - `references/automation-scripts/automation/watch-next-batch.sh`
 - `references/automation-scripts/automation/write-design-result.py`
-- `references/automation-scripts/automation/write-memory-hub-note.py`
+- `references/automation-scripts/automation/write-zzirit-docs-note.py`
 - `references/automation-scripts/automation/zzirit-codex-auto.crontab`
 - `references/automation-scripts/e2e/ios-appium-onboarding.mjs`
 - `references/automation-scripts/e2e/ios-appium-onboarding.sh`

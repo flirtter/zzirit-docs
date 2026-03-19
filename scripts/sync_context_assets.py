@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Iterable
 
 
-HUB_ROOT = Path("/Users/user/zzirit-memory-hub")
+HUB_ROOT = Path("/Users/user/zzirit-docs")
 V2_ROOT = Path("/Users/user/zzirit-v2")
 DOWNLOADS_DESIGN = Path("/Users/user/Downloads/Design")
 

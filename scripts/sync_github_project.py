@@ -8,7 +8,7 @@ from typing import Dict, List, Optional
 
 ROOT = Path(__file__).resolve().parents[1]
 SEED_PATH = ROOT / "snapshots" / "project-board-seed.json"
-REPO = "ahg0223/zzirit-memory-hub"
+REPO = "ahg0223/zzirit-docs"
 OWNER = "@me"
 
 

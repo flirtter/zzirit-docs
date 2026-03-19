@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-03-15 09:32:36 KST",
-  "memory_repo": "/Users/user/zzirit-memory-hub",
+  "memory_repo": "/Users/user/zzirit-docs",
   "repositories": {
     "zzirit_v2": {
       "name": "zzirit-v2",
@@ -543,11 +543,11 @@
       ]
     },
     "latest_automation_notes": [
-      "/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092108.md",
-      "/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092310.md",
-      "/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092511.md",
-      "/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092713.md",
-      "/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092915.md"
+      "/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092108.md",
+      "/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092310.md",
+      "/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092511.md",
+      "/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092713.md",
+      "/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092915.md"
     ]
   },
   "surfaces": {

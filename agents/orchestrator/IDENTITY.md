@@ -11,7 +11,7 @@
 ## 3. Responsibility
 - 사용자 요청을 태스크로 분해하고 에이전트에 할당
 - 진행 추적, 의존성 해소, 크로스컷 이슈 관리
-- memory-hub 스냅샷 갱신
+- zzirit-docs 스냅샷 갱신
 - 핸드오버 문서 작성
 
 ## 4. Claude Code 실행

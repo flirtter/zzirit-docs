@@ -2,7 +2,7 @@
 
 - generated_at: `2026-03-15 09:32:36 KST`
 - updated_at: `2026-03-18 KST`
-- memory_repo: `/Users/user/zzirit-memory-hub`
+- memory_repo: `/Users/user/zzirit-docs`
 
 ## Active repositories
 - zzirit-v2: `feat/qa-foundation` @ `4db17498e582`
@@ -47,11 +47,11 @@
 - appium_chat: `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-031245`, `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-031452`
 
 ## Latest automation run notes
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092108.md`
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092310.md`
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092511.md`
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092713.md`
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092915.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092108.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092310.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092511.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092713.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092915.md`
 
 ## Surface snapshot
 - `login`: state=`implemented`, qa=`onboarding_appium`, automation=`partial`

@@ -35,8 +35,8 @@
   - `/Users/user/zzirit-v2/artifacts/appium-chat/20260314-042040`
 
 ## Latest automation run notes
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092108.md`
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092310.md`
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092511.md`
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092713.md`
-- `/Users/user/zzirit-memory-hub/snapshots/automation-run-notes/20260315-092915.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092108.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092310.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092511.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092713.md`
+- `/Users/user/zzirit-docs/snapshots/automation-run-notes/20260315-092915.md`

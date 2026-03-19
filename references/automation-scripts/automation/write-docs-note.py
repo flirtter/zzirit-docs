@@ -19,7 +19,7 @@ def load_json(path: Path) -> dict:
 def main() -> int:
     if len(sys.argv) != 6:
         print(
-            "usage: write-memory-hub-note.py <run_result.json> <run_summary.md> <run_dir> <out_md> <out_json>",
+            "usage: write-zzirit-docs-note.py <run_result.json> <run_summary.md> <run_dir> <out_md> <out_json>",
             file=sys.stderr,
         )
         return 2
