@@ -35,6 +35,18 @@ ZZIRIT 프로젝트의 최상위 MOC(Map of Content).
 
 - [[04. Resources/automation-scripts]] — 자동화 스크립트
 
+## 운영 문서
+
+- [[TODO]] — 개선 로드맵
+- [[PUBLISHING]] — 원격 배포 절차
+- [[references/qa-workflow]] — QA 워크플로 결정
+- [[references/qa-templates]] — QA 양식
+- [[references/tc-generation-rules]] — TC 생성 규칙
+
+## 핸드오버
+
+- [[01. Journal/handovers/HANDOVER_20260320_s5]] — 최근 핸드오버 (세션5)
+
 ## 시스템 문서
 
 - [[AGENTS]] — 에이전트 행동 규칙
