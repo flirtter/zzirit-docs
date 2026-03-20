@@ -1,0 +1,84 @@
+name: "QA 버그 리포트"
+description: "앱 테스트 중 발견한 버그를 등록합니다"
+title: "[QA] "
+labels: ["qa-bug"]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      description: 어느 화면에서 발견했나요?
+      options:
+        - login
+        - onboarding
+        - my
+        - likes
+        - meeting
+        - chat
+        - lightning
+        - billing
+        - moderation
+        - 기타
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 심각도
+      description: 얼마나 심각한 문제인가요?
+      options:
+        - "critical — 앱 크래시/데이터 유실"
+        - "major — 핵심 기능 불가"
+        - "minor — 사용 가능하지만 불편"
+        - "cosmetic — 디자인/텍스트 차이"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 경로
+      description: 어떻게 하면 이 버그가 나타나나요?
+      placeholder: |
+        1. 앱 실행
+        2. 00 탭 진입
+        3. 00 버튼 탭
+        4. → 이렇게 됨
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대 동작
+      description: 원래 어떻게 되어야 하나요?
+      placeholder: "00이 표시되어야 하는데 00이 나옴"
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 스크린샷
+      description: 이미지를 드래그앤드롭 하세요 (필수)
+      placeholder: "여기에 이미지를 끌어다 놓으세요"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: 디바이스
+      description: 테스트한 기기
+      placeholder: "예: iPhone 15 Pro, Galaxy S24"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 참고사항
+      description: 추가 정보가 있으면 적어주세요
+    validations:
+      required: false
