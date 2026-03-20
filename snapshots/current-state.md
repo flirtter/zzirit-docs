@@ -67,7 +67,7 @@
 - 시드 데이터 운영 중 — `zzirit-api/scripts/seed_data.py` ([[seed-data-guide]])
 
 ## 기술 메모
-- 현재 유저 UID: `YativJyC3hR2SAU6Kq5R5ArgU33`
+- 현재 유저 UID: `ycSU5Ds7ezVSDvFTNkIUWSl7w0o1`
 - 볼트 잔액: 10,090
 - 시뮬레이터: iPhone 16 Pro (iOS 18.3), Metro 8081
 - git-lfs 설치 완료 (zzirit-docs 이미지 LFS 추적)

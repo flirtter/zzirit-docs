@@ -78,7 +78,7 @@ s6 세션에서 Unsplash 인물 사진 10장을 업로드한 상태.
 
 ## 메인 유저 정보
 
-- UID: `YativJyC3hR2SAU6Kq5R5ArgU33`
+- UID: `ycSU5Ds7ezVSDvFTNkIUWSl7w0o1` (환경변수 `SEED_UID`로 변경 가능)
 - 볼트 잔액: 10,000
 - 프로필: 개발자, 27세, INTP
 
