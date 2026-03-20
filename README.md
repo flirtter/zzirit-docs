@@ -1,121 +1,77 @@
-# ZZIRIT Memory Hub
+# ZZIRIT Docs
 
-ZZIRIT 프로젝트의 운영/맥락 허브. Obsidian vault + Claude Code 하네스.
+ZZIRIT 프로젝트의 운영/맥락 허브. Obsidian vault + AI 코딩 어시스턴트 하네스.
 
-## Quick Start
+## 5분 세팅
 
-### Obsidian으로 열기
-1. Obsidian → "Open folder as vault" → 이 폴더 선택
-2. Community plugins 활성화
-3. 권장 플러그인 설치: Obsidian Git, Templater, Folder Notes, Kanban, Dataview
+### 1. 클론
 
-### Claude Code로 사용
-이 폴더에서 Claude Code 실행 — CLAUDE.md가 자동 로드됨.
-
-## 구조
-
-```
-00. Inbox/          ← 미분류 자료
-01. Journal/        ← 세션 기록 (handover, workplan, QA report)
-02. Project/        ← surface별 프로젝트 (login, onboarding, my, ...)
-03. Area/           ← 영구 영역 (Design, Database, Agents, Decisions, Playbooks)
-04. Resources/      ← 참고 자료 (automation scripts)
-05. Archive/        ← 완료 프로젝트
-99. Templates/      ← 노트 템플릿
-.claude/skills/     ← Claude Code 스킬 7개
-```
-
-탐색 시작점: [Knowledge.md](Knowledge.md)
-
----
-
-## Legacy
-
-ZZIRIT 작업의 장기 기억 저장소다.
-
-목적:
-- `zzirit-v2`, `zzirit-proxy`의 현재 상태와 커밋 맥락을 보존
-- surface별 사양, QA 상태, 자동화 상태를 GitHub 이슈/문서 기반으로 관리
-- 이후 유지보수/QA/리팩토링 시 이 레포를 기준 문맥으로 사용
-
-현재 원격:
-- `https://github.com/ahg0223/zzirit-docs`
-
-구성:
-- `snapshots/`: 현재 로컬/원격 상태에서 생성한 스냅샷
-- `snapshots/automation-run-notes/`: 원격 자동화 batch가 남긴 run별 memory note 사본
-- `references/`: surface spec 사본과 로컬 디자인 PNG 사본
-- `references/automation-scripts/`: 실제 자동화/리뷰/e2e 스크립트 사본
-- `.github/ISSUE_TEMPLATE/`: QA, 디자인 갭, 자동화 플래키, 리팩토링 추적용 이슈 템플릿
-- `.github/workflows/`: Gemini PR review와 issue triage 자동화
-- `.github/workflows/gemini-sanity-check.yml`: Gemini 연결 상태를 수동 점검하는 sanity workflow
-- `GEMINI.md`: Gemini GitHub Action이 이 저장소를 읽을 때 따라야 할 저장소 전용 지침
-- `scripts/refresh_snapshot.py`: 현재 작업 트리와 Mac Studio 원격 상태를 다시 수집해 스냅샷을 갱신
-- `scripts/sync_context_assets.py`: `zzirit-v2` spec과 로컬 디자인 자산을 허브 안으로 복제
-- `scripts/export_project_seed.py`: 현재 이슈를 GitHub Projects seed CSV/JSON으로 변환
-- `scripts/bootstrap_github_project.py`: GitHub Project scope 확인과 부트스트랩 안내
-- `scripts/sync_github_project.py`: 현재 issue/seed 상태를 GitHub Project field 값으로 동기화
-- `playbooks/github-projects.md`: GitHub Projects 운영 규칙과 필드/뷰 설계
-- `PUBLISHING.md`: GitHub 원격 레포 생성/푸시 절차
-
-기본 운영 원칙:
-- 이 레포는 코드 레포가 아니라 운영/맥락 레포다.
-- 실제 구현은 `zzirit-v2`, `zzirit-proxy`에서 하고, 여기엔 요약/상태/결정/이슈를 남긴다.
-- surface별 세부 상태는 `snapshots/surface-status.md` 와 `snapshots/current-state.json`을 우선 참고한다.
-- 자동화의 현재 큐/상태는 `snapshots/automation-state.md` 와 `snapshots/current-state.json`을 우선 참고한다.
-- 최신 batch 맥락은 `snapshots/automation-run-notes/` 의 가장 최근 note를 우선 참고한다.
-
-현재 GitHub 운영:
-- 레포 이름: `zzirit-docs`
-- 공개 여부: `private`
-- Gemini GitHub Actions:
-  - `Gemini PR Review`
-  - `Gemini Issue Triage`
-- 필요한 secret:
-  - `GEMINI_API_KEY`
-- 권장 variable:
-  - `GEMINI_CLI_VERSION`
-  - `GEMINI_REVIEW_MODEL`
-  - `GEMINI_TRIAGE_MODEL`
-  - `GEMINI_DEBUG`
-- 기본 라벨:
-  - `surface:login`
-  - `surface:onboarding`
-  - `surface:my`
-  - `surface:likes`
-  - `surface:meeting`
-  - `surface:chat`
-  - `surface:automation`
-  - `qa`
-  - `design-gap`
-  - `flake`
-  - `refactor`
-  - `automation`
-
-현재 생성된 초기 이슈:
-- `#1` `[my-followup] MY 후속 정리`
-- `#2` `[onboarding-followup] 온보딩 후속 정리`
-- `#3` `[login-followup] 로그인 후속 정리`
-- `#4` `[meeting-followup] 미팅 후속 정리`
-- `#5` `[likes-followup] 좋아요 후속 정리`
-
-GitHub Projects 운영:
-- 이슈는 맥락과 작업 단위
-- Projects는 현재 상태판
-- 권장 프로젝트 이름은 `ZZIRIT Delivery`
-- 필드/뷰 설계는 `playbooks/github-projects.md` 참고
-- 현재 프로젝트 생성 완료:
-  - `https://github.com/users/ahg0223/projects/1`
-- `scripts/sync_github_project.py`로 실제 GitHub Project field까지 동기화
-- 대신 `scripts/export_project_seed.py` 가 현재 이슈를 project seed 파일로 생성한다.
-- 현재 상태 스냅샷:
-  - `snapshots/project-state.md`
-
-갱신:
 ```bash
-cd /Users/user/zzirit-docs
-python3 scripts/sync_context_assets.py
-python3 scripts/refresh_snapshot.py
-python3 scripts/export_project_seed.py
-python3 scripts/sync_github_project.py
+git clone https://github.com/flirtter/zzirit-docs.git
+cd zzirit-docs
 ```
+
+### 2. Obsidian으로 열기
+
+1. [Obsidian](https://obsidian.md) 설치 (무료)
+2. Obsidian 실행 → **Open folder as vault** → `zzirit-docs` 폴더 선택
+3. "Trust author" 클릭 → Community plugins 활성화
+4. 플러그인 설치 (Settings > Community plugins > Browse):
+   - **Kanban** (칸반 보드)
+   - **Dataview** (쿼리)
+   - **Templater** (템플릿)
+
+### 3. 탐색 시작
+
+Obsidian에서 `Knowledge.md` 열기 — 모든 문서의 진입점.
+
+주요 문서:
+| 문서 | 용도 |
+|------|------|
+| `Knowledge.md` | 전체 탐색 진입점 |
+| `snapshots/current-state.md` | 프로젝트 현재 상태 |
+| `02. Project/02. Project.md` | surface별 칸반 |
+| `references/api-spec.md` | API 명세 (SSOT) |
+| `references/retro-index.md` | 회고/교훈 모음 |
+
+## AI 코딩 어시스턴트로 사용
+
+### Claude Code
+```bash
+cd zzirit-docs
+claude   # CLAUDE.md 자동 로드
+```
+
+### Gemini CLI
+```bash
+cd zzirit-docs
+gemini   # GEMINI.md 자동 로드
+```
+
+## 레포 구조
+
+```
+02. Project/        ← surface별 프로젝트 (login, my, likes, meeting, chat, lightning...)
+03. Area/           ← 영구 영역 (Database, Design, Agents, Decisions)
+01. Journal/        ← 세션 핸드오버, QA 리포트
+references/         ← API 명세, 회고, 시드 가이드, 필드 매핑
+snapshots/          ← 프로젝트 상태 스냅샷
+99. Templates/      ← 노트 템플릿 (Handover, QA Issue 등)
+scripts/            ← 자동화 스크립트
+```
+
+## 관련 레포
+
+| 레포 | 설명 | 기술 |
+|------|------|------|
+| [zzirit-rn](https://github.com/flirtter/zzirit-rn) | 모바일 앱 | React Native + Expo |
+| [zzirit-api](https://github.com/flirtter/zzirit-api) | API 서버 | Flask + Firestore |
+| **zzirit-docs** (이 레포) | 운영/맥락 허브 | Obsidian vault |
+
+## 핵심 규칙
+
+- 이 레포는 **코드가 아니라 문서**. 실제 코드는 zzirit-rn, zzirit-api에 있음
+- 새 문서 추가 시 상위 MOC에 링크
+- 세션 종료 시 핸드오버 생성 (교훈 섹션 필수)
+- 코드 변경 후 `references/retro-index.md`의 리그레션 체크리스트 실행
+- 실제 유저 데이터를 시드/더미로 덮어쓰지 않음
