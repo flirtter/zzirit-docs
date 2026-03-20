@@ -1,0 +1,80 @@
+name: "디자인 리뷰"
+description: "구현 vs 디자인 차이 피드백 & 수정 요청"
+title: "[디자인] "
+labels: ["design-review"]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      description: 어느 화면인가요?
+      options:
+        - login
+        - onboarding
+        - my
+        - likes
+        - meeting
+        - chat
+        - lightning
+        - billing
+        - moderation
+        - 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: where
+    attributes:
+      label: 수행 절차
+      description: 어디서 확인할 수 있나요?
+      placeholder: |
+        예: MY탭 > 프로필 편집 > 관심사 영역
+    validations:
+      required: true
+
+  - type: textarea
+    id: as_is
+    attributes:
+      label: "현재 상태 (AS-IS)"
+      description: 현재 구현된 모습. 스크린샷을 드래그앤드롭 해주세요.
+      placeholder: "현재 구현 스크린샷을 여기에 끌어다 놓으세요"
+    validations:
+      required: true
+
+  - type: textarea
+    id: to_be
+    attributes:
+      label: "기대 상태 (TO-BE)"
+      description: Figma 기준 올바른 모습. 스크린샷/Figma 링크를 첨부해주세요.
+      placeholder: "Figma 스크린샷 또는 링크를 여기에 첨부하세요"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: 상세 내용
+      description: 어떤 점이 다른지 구체적으로 적어주세요.
+      placeholder: |
+        예: 좌우 간격이 24dp로 넓어보임. 전체보기에 맞춰 16dp로 조정 필요.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options:
+        - "높음 — 출시 전 반드시 수정"
+        - "중간 — 수정 권장"
+        - "낮음 — 여유 있을 때"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 참고사항
+      description: Figma 링크, 관련 이슈 번호 등
+    validations:
+      required: false

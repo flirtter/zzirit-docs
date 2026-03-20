@@ -1,0 +1,87 @@
+name: "기획 요청"
+description: "신규 기능/변경 요청 & 스펙 정리"
+title: "[기획] "
+labels: ["feature-request"]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      description: 어느 화면에 해당하나요?
+      options:
+        - login
+        - onboarding
+        - my
+        - likes
+        - meeting
+        - chat
+        - lightning
+        - billing
+        - moderation
+        - 공통
+        - 신규
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 요청 유형
+      options:
+        - "신규 기능"
+        - "기존 기능 변경"
+        - "기능 제거"
+        - "플로우 변경"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 요약
+      description: 무엇을 왜 해야 하는지 한두 문장으로 적어주세요.
+      placeholder: |
+        예: 좋아요 받은 프로필을 확인할 때 볼트가 차감되는데, 무료 1회 미리보기를 추가하고 싶습니다. 전환율이 너무 낮아서.
+    validations:
+      required: true
+
+  - type: textarea
+    id: spec
+    attributes:
+      label: 상세 스펙
+      description: 구체적인 동작/조건/예외를 적어주세요.
+      placeholder: |
+        - 사용자가 처음 "받은 좋아요" 탭에 진입하면...
+        - 무료 미리보기 1회 사용 후에는...
+        - 예외: 이미 매칭된 유저는...
+    validations:
+      required: true
+
+  - type: textarea
+    id: design
+    attributes:
+      label: 디자인 참고
+      description: Figma 링크, 와이어프레임, 참고 이미지 등
+      placeholder: "Figma 링크 또는 참고 이미지를 드래그앤드롭 하세요"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options:
+        - "P0 — 출시 필수"
+        - "P1 — 출시 전 강력 권장"
+        - "P2 — 다음 스프린트"
+        - "P3 — 백로그"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 참고사항
+      description: 관련 이슈, 배경 맥락, 일정 등
+    validations:
+      required: false
