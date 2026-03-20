@@ -63,7 +63,8 @@
 - StaticMapPreview 서버 프록시 기반 전환 필요
 - createOrGetChatRoom O(n) -> pair_key 인덱스 최적화 필요
 - **앱 profile 쓰기를 서버 API로 전환** (Phase 2 — 현재 앱이 Firestore 직접 쓰기)
-- **서버 배포 + 실 데이터 E2E 테스트** 필요
+- **필드 네이밍 이중화 해소** — 앱 Firestore 직접 읽기 → 서버 API 또는 새 필드명 전환 ([[field-naming-map]])
+- 시드 데이터 운영 중 — `zzirit-api/scripts/seed_data.py` ([[seed-data-guide]])
 
 ## 기술 메모
 - 현재 유저 UID: `YativJyC3hR2SAU6Kq5R5ArgU33`
