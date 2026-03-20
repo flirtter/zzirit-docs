@@ -41,6 +41,7 @@ ZZIRIT 프로젝트의 최상위 MOC(Map of Content).
 - [[references/api-spec]] — API 명세서 (SSOT)
 - [[references/field-naming-map]] — 앱↔서버 필드 네이밍 불일치 맵
 - [[references/seed-data-guide]] — 시드 데이터 운영 가이드
+- [[references/retro-index]] — **회고 인덱스 (리그레션 체크리스트 포함)**
 - [[references/retro-s7-regression]] — 세션7 회고 (프로필 카드 리그레션)
 - [[TODO]] — 개선 로드맵
 - [[PUBLISHING]] — 원격 배포 절차

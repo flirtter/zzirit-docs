@@ -6,8 +6,9 @@
 ## 컨텍스트 로드 순서
 
 1. Knowledge.md — 전체 탐색 진입점
-2. snapshots/current-state.md — 프로젝트 현재 상태
-3. 02. Project/02. Project.md — surface별 칸반 현황
+2. references/retro-index.md — **회고 인덱스 (반드시 읽기)**
+3. snapshots/current-state.md — 프로젝트 현재 상태
+4. 02. Project/02. Project.md — surface별 칸반 현황
 
 ## 핵심 규칙
 
@@ -16,6 +17,9 @@
 - QA 노트의 이미지는 해당 surface의 attachments/에 저장
 - 새 결정은 capture-decision 스킬로 ADR 생성
 - 세션 종료 시 wrap-session 스킬로 handover 생성
+- **핸드오버에 반드시 교훈(Lessons Learned) 섹션 포함** — 실수든 성공이든 기록
+- **코드 변경 후 리그레션 체크리스트 실행** — retro-index.md 참조
+- 실제 유저 데이터를 시드/더미로 덮어쓰지 않는다
 
 ## Surface 목록
 
