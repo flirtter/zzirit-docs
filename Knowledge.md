@@ -38,6 +38,7 @@ ZZIRIT 프로젝트의 최상위 MOC(Map of Content).
 
 ## 운영 문서
 
+- [[references/api-spec]] — API 명세서 (SSOT)
 - [[TODO]] — 개선 로드맵
 - [[PUBLISHING]] — 원격 배포 절차
 - [[references/qa-workflow]] — QA 워크플로 결정
