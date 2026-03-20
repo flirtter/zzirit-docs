@@ -1,5 +1,5 @@
 name: "QA 버그 리포트"
-description: "앱 테스트 중 발견한 버그를 등록합니다"
+description: "앱 테스트 중 발견한 버그를 등록합니다 — 용어 사전: https://github.com/flirtter/zzirit-docs/blob/main/references/qa-ui-glossary.md"
 title: "[QA] "
 labels: ["qa-bug"]
 body:
