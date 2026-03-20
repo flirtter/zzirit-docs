@@ -5,7 +5,11 @@ up: "[[Knowledge]]"
 ---
 ZZIRIT 데이터베이스 스키마 모음.
 
-## SQL Schemas
+## Firestore 스키마 (SSOT)
+
+- [[firestore-schema]] — 운영 Firestore 컬렉션 정의 (2026-03-20~)
+
+## SQL Schemas (초기 설계 참고용)
 
 - bolts.sql
 - chats.sql
