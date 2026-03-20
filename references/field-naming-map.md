@@ -31,6 +31,13 @@ created: 2026-03-20
 | MY 페이지 | `my.tsx` | `name`, `job`, `keywords`, `statusMessage`, `profileImages`, `image_url` |
 | 프로필 상세 | `profile-detail.tsx` | `name`, `age`, `job`, `image_url` |
 
+### 앱 → API 응답 매핑 (수정 완료)
+
+| 화면 | 파일 | API 필드 → 앱 필드 | 상태 |
+|------|------|-------------------|------|
+| 번개탭 | `naverMapService.ts:68` | `nickname\|\|name` → `name` | ✅ 수정 완료 |
+| 번개탭 | `naverMapService.ts:77` | `profile_image\|\|image_url` → `profileImageUrl` | ✅ 수정 완료 |
+
 ### 서버 API 응답 (새 필드명)
 
 | API | 응답 필드 |
