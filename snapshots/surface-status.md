@@ -9,7 +9,7 @@
 | meeting | host_qa | high | implemented | final spacing polish and release clean capture |
 | chat | host_qa | high | design_matched | 위치 NaverMapView 프리뷰 수정, Unknown User Firestore 조회, 메시지 정렬 수정 완료. 커스텀 크롭 UI 남음 |
 | automation | state_machine | high | implemented | promote release clean capture gates and tighten spec-driven follow-up task generation |
-| lightning | manual | low | doing | 프로필 카드 피드 높이 조정 완료, 프로필 상세 + 스크롤 피드 Figma 매칭 진행 중 |
+| lightning | manual | low | doing | 마커/목록 이미지 불일치 수정완료(user_id hash), 프로필 카드 피드 Figma 매칭 진행 중 |
 
 ## Current spec files
 - `README`
