@@ -1,6 +1,6 @@
 # Current State
 
-- generated_at: `2026-03-20 18:00 KST`
+- generated_at: `2026-03-20 s7 KST`
 - memory_repo: `/Users/user/zzirit-docs`
 
 ## Active repositories
@@ -36,8 +36,25 @@
 - `chat`: state=`design_matched`, qa=`host_qa`, automation=`high`
 - `lightning`: state=`doing`, qa=`manual`, automation=`low`
 
+## s7 세션 작업 (API/DB 재정의)
+
+### 완료
+- ✅ API 명세서 작성 (`references/api-spec.md`) — 앱↔서버 갭 8개 식별
+- ✅ Firestore 스키마 재정의 (`03. Area/Database/firestore-schema.md`) — 운영 SSOT
+- ✅ 서버 profile 스키마 확장 — 앱 15개 필드 수용 + 레거시 호환
+- ✅ get_nearby_profiles 응답 → NearbyUser 포맷 (nickname, age, profile_image, distance_m)
+- ✅ like/match 응답 필드명 통일 (nickname, profile_image)
+- ✅ match 생성 시 chat_room 자동 생성 + chat_room_id 반환
+- ✅ 데모 자동생성 로직 제거 (get_nearby_profiles, get_nearby_meetings)
+
+### 서버 변경 파일 (zzirit-api)
+- `profile/profileModel.py` — Profile dataclass 앱 기준 확장
+- `profile/profileBo.py` — create/update에 새 필드 수용 + 레거시 매핑
+- `location/locationController.py` — build_location_view NearbyUser 포맷, 데모 제거
+- `like/likeController.py` — _get_basic_profile 필드명 수정, match+chatroom 연동
+
 ## 미해결 이슈
-- Like 블러/결제 실 서버 연동 (현재 클라이언트 데모 상태)
+- ~~Like 블러/결제 실 서버 연동~~ → like/match API 필드 정리 완료, 실 연동 테스트 필요
 - 매칭 알림 + 매칭 목록 미구현
 - ~~번개탭 마커/목록 이미지 불일치~~ → 수정 완료 (user_id hash 기반)
 - 번개탭 프로필 카드 Figma 매칭 계속 (액션버튼 오버레이, 키워드칩)
@@ -45,6 +62,8 @@
 - 칩 컴포넌트 공유 모듈 추출 필요 (my-edit <-> onboarding)
 - StaticMapPreview 서버 프록시 기반 전환 필요
 - createOrGetChatRoom O(n) -> pair_key 인덱스 최적화 필요
+- **앱 profile 쓰기를 서버 API로 전환** (Phase 2 — 현재 앱이 Firestore 직접 쓰기)
+- **서버 배포 + 실 데이터 E2E 테스트** 필요
 
 ## 기술 메모
 - 현재 유저 UID: `YativJyC3hR2SAU6Kq5R5ArgU33`
